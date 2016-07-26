@@ -30,7 +30,7 @@ nav {
 }
 
 .header {
-  color: color("blue", "darken");
+  color: color("materialize-red", "lighten-2");
   font-weight: 300;
 }
 
@@ -62,14 +62,6 @@ footer.example {
   header, main, footer {
     padding-left: 0;
   }
-}
-
-/* move browser sync notify to bottom right */
-
-#__bs_notify__ { 
-  top: auto !important; 
-  bottom: 0 !important;
-  right: 10px !important; 
 }
 
 /********************
@@ -216,7 +208,7 @@ a.button-collapse.top-nav {
 }
 
 #index-banner {
-  background-color: color("dark-grey", "base");
+  background-color: color("materialize-red", "lighten-2");
   .container {
     position: relative;
   }
@@ -277,7 +269,7 @@ a.button-collapse.top-nav {
 }
 
 #download-button {
-  background-color: color("blue", "base");
+  background-color: color("materialize-red", "lighten-3");
   width: 260px;
   height: 70px;
   line-height: 70px;
@@ -285,7 +277,7 @@ a.button-collapse.top-nav {
   font-weight: 400;
 
   &:hover {
-    background-color: color("blue", "lighten");
+    background-color: lighten(color("materialize-red", "base"), 30%);
   }
 }
 
@@ -294,7 +286,7 @@ a.button-collapse.top-nav {
 
   i {
     margin: 40px 0;
-    color: color("blue", "base");
+    color: color("materialize-red", "lighten-2");
     font-size: 7rem;
     display: block;
   }

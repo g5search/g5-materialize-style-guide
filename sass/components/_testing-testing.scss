@@ -1,0 +1,35 @@
+.fuck {
+  color: green !important;
+}
+
+// For use on header, sidebar and footer elements. 
+$universal-blue: #6dbde2;
+
+// CMS Basic Colors
+// fuck this shit
+
+$blue: (
+  "base": #99D1EB 99d1eb
+);
+
+// Green
+// #339933
+// 51, 153, 51
+// Red
+// #FF6666
+// 255, 102, 102
+// Dark Grey
+// #2A2A2A
+// 42, 42, 42
+// Medium Grey
+// #918F8F
+// 145, 143, 143
+// Light Grey
+// #F2F2F2
+// 242, 242, 242
+
+
+
+#index-banner {
+  background-color: $universal-blue !important;
+}

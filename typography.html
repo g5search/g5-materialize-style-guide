@@ -8,7 +8,7 @@
     <meta name="description" content="Materialize is a modern responsive CSS framework based on Material Design by Google. ">
     <title>Typography - Materialize</title>
     <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" href="https://s3-us-west-2.amazonaws.com/g5-orion-clients/g5-c-ikecoh6p-g5/g5-cl-55nzm5njd-g5/uploads/favicon.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
     <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
@@ -19,6 +19,7 @@
     <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
     <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script>
       window.liveSettings = {
         api_key: "a0b49b34b93844c38eaee15690d86413",
@@ -127,9 +128,13 @@
 
           <h4>Removing Roboto</h4>
           <p>In case you don't want to use Roboto on your webpage, fear not. Simply change the font stack by modifying the code below to your liking and add it to your custom css.</p>
+          <p>For G5 we will use Open Sans across all apps. Insert the following link in the head of the app:</p>
+        <pre><code class="language-markup">
+          &lt;link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'&gt;
+        </code></pre>  
         <pre><code class="language-css">
   html {
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    font-family: "Open Sans", sans-serif;
   }
         </code></pre>
       </div>
@@ -188,10 +193,7 @@
     </div>
     <div class="col hide-on-small-only m3 l2">
       <div class="toc-wrapper">
-        <div class="buysellads hide-on-small-only">
-          <!-- CarbonAds Zone Code -->
-          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=materializecss" id="_carbonads_js"></script>
-        </div>
+        
         <div style="height: 1px;">
           <ul class="section table-of-contents">
             <li><a href="#roboto">Roboto</a></li>

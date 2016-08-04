@@ -1,0 +1,28 @@
+/********************
+  Index Page Styles
+********************/
+
+#index-banner {
+  background-color: color("dark-grey", "lighten-2") !important;
+}
+
+// custom styled sidebar
+
+ul.side-nav.fixed {
+  overflow: hidden;
+
+  li {
+    line-height: $sidenav-item-height;
+
+    &.active {
+      background-color: rgba(0,0,0,.05);
+    }
+
+    a {
+      font-size: $sidenav-font-size;
+      line-height: $sidenav-item-height;
+      height: $sidenav-item-height;
+      padding: 0 30px;
+    }
+  }
+}

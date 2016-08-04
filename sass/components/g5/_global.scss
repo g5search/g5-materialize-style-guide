@@ -1,0 +1,13 @@
+// Breadcrumbs
+.breadcrumb {
+
+  i,
+  [class^="mdi-"], [class*="mdi-"],
+  i.material-icons {
+    font-size: 20px;
+  }
+
+  &:before {
+    margin: 0 5px 0 4px;
+  }
+}

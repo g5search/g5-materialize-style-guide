@@ -2187,6 +2187,8 @@
    ========================================================================== */
 /* 10. Forms
    ========================================================================== */
+/* 14. Side Navigation
+   ========================================================================== */
 #index-banner {
   background-color: #5D5D5D !important;
 }
@@ -11867,7 +11869,7 @@ input[type=range]:focus::-ms-fill-upper {
   height: calc(100% + 60px);
   height: -moz-calc(100%);
   padding-bottom: 60px;
-  background-color: #fff;
+  background-color: #424242;
   z-index: 999;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -11893,7 +11895,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav li {
   float: none;
-  line-height: 48px;
+  line-height: 38px;
 }
 
 .side-nav li.active {
@@ -11901,12 +11903,12 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .side-nav a {
-  color: rgba(0, 0, 0, 0.87);
+  color: #bdbdbd;
   display: block;
   font-size: 14px;
   font-weight: 500;
-  height: 48px;
-  line-height: 48px;
+  height: 38px;
+  line-height: 38px;
   padding: 0 32px;
 }
 
@@ -11938,10 +11940,10 @@ input[type=range]:focus::-ms-fill-upper {
 .side-nav li > a > [class^="mdi-"], .side-nav li > a > [class*="mdi-"],
 .side-nav li > a > i.material-icons {
   float: left;
-  height: 48px;
-  line-height: 48px;
+  height: 38px;
+  line-height: 38px;
   margin: 0 32px 0 0;
-  width: 24px;
+  width: 19px;
   color: rgba(0, 0, 0, 0.54);
 }
 
@@ -11955,7 +11957,7 @@ input[type=range]:focus::-ms-fill-upper {
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   font-weight: 500;
-  line-height: 48px;
+  line-height: 38px;
 }
 
 .side-nav .subheader:hover {
@@ -12023,7 +12025,7 @@ input[type=range]:focus::-ms-fill-upper {
 .side-nav.fixed a {
   display: block;
   padding: 0 16px;
-  color: rgba(0, 0, 0, 0.87);
+  color: #bdbdbd;
 }
 
 .side-nav.fixed {
@@ -12062,7 +12064,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .side-nav .collapsible-body li.active a,
 .side-nav.fixed .collapsible-body li.active a {
-  color: #fff;
+  color: #424242;
 }
 
 #sidenav-overlay {
@@ -13806,4 +13808,23 @@ textarea.materialize-textarea + label:after {
 
 html {
   font-family: "Open Sans", sans-serif;
+}
+
+.side-nav {
+  /* temp */
+}
+
+.side-nav.fixed a {
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.side-nav.fixed a i {
+  padding-right: 12px;
+}
+
+.side-nav.fixed a.active {
+  background-color: #2196F3;
+  color: #FFFFFF;
 }

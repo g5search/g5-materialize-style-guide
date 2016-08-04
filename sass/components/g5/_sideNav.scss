@@ -1,17 +1,12 @@
 .side-nav {
   /* temp */
-  padding-top: 100px;
+  // padding-top: 100px;
 
 
-
-  background-color: color("grey", "darken-3");
   &.fixed {
     a {
       display: block;
-      color: color("grey", "lighten-1");
       width: 90%;
-      height: 38px;
-      line-height: 38px;
       margin-left: 5%;
       i {
         padding-right: 12px;

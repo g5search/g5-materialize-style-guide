@@ -2191,6 +2191,30 @@
   background-color: #5D5D5D !important;
 }
 
+.side-nav {
+  /* temp */
+  padding-top: 100px;
+  background-color: #424242;
+}
+
+.side-nav.fixed a {
+  display: block;
+  color: #bdbdbd;
+  width: 90%;
+  height: 38px;
+  line-height: 38px;
+  margin-left: 5%;
+}
+
+.side-nav.fixed a i {
+  padding-right: 12px;
+}
+
+.side-nav.fixed a.active {
+  background-color: #87D7FC;
+  color: #FFFFFF;
+}
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

@@ -2187,11 +2187,6 @@
    ========================================================================== */
 /* 10. Forms
    ========================================================================== */
-body {
-  border: 20px solid black !important;
-  background: red !important;
-}
-
 #index-banner {
   background-color: #5D5D5D !important;
 }

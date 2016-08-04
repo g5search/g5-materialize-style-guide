@@ -13787,7 +13787,7 @@ textarea.materialize-textarea + label:after {
 /* Switch
    ========================================================================== */
 .switch label input[type=checkbox]:checked + .lever:after {
-  left: 40px;
+  left: 44px;
 }
 
 .switch label {
@@ -13797,22 +13797,11 @@ textarea.materialize-textarea + label:after {
 
 .switch label .lever {
   width: 64px;
-  height: 22px;
-  margin: 0;
+  margin: 0 5px;
 }
 
 .switch label .lever:after {
-  content: "ON";
-  width: 24px;
-  height: 22px;
   border-radius: 0;
-  box-shadow: none;
-  left: 0;
-  top: 0;
-}
-
-.switch [type="checkbox"]:not(:checked) {
-  background: red !important;
 }
 
 html {

@@ -6,7 +6,7 @@
   &:checked + .lever {
 
     &:after {
-      left: 40px;
+      left: 44px;
     }
   }
 }
@@ -17,23 +17,23 @@
 }
 .switch label .lever {
   width: 64px;
-  height: 22px;
-  margin: 0;
+  // height: 22px;
+  margin: 0 5px;
 
   &:after {
-    content: "ON";
-    width: 24px;
-    height: 22px;
+    // content: "ON";
+    // width: 24px;
+    // height: 22px;
     border-radius: $switch-radius;
-    box-shadow: none;
-    left: 0;
-    top: 0;
+    // box-shadow: none;
+    // left: 0;
+    // top: 0;
   }
 }
 
 .switch {
   [type="checkbox"]:not(:checked) {
-    background: red !important;
+    // background: red !important;
   } 
   [type="checkbox"]:checked {
 

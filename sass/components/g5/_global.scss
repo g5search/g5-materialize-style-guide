@@ -217,18 +217,6 @@ main {
 
 // BEGIN CLEAN STYLES
 
-// container heading
-@mixin container-heading {
-  background-color: color("dark-grey", "base");
-  border-radius: 6px 6px 0 0;
-  .title {
-    color: color("shades", "white");
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-  }
-}
-
 // Breadcrumbs
 .breadcrumb {
   font-size: 1rem;
@@ -248,10 +236,34 @@ main {
 .collection {
   &.with-header {
     border-radius: 6px;
-    @include container-heading;
+    .collection-header {
+      background-color: color("dark-grey", "base");
+      border-radius: 6px 6px 0 0;
+      .title {
+        color: color("shades", "white");
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+  .collection-item {
+    // line-height: 1.5rem;
+    // padding: 10px 20px 20px 20px;
   }
 }
 
+.container-header {
+    background-color: color("dark-grey", "base");
+    border-radius: 6px 6px 0 0;
+    .title {
+      color: color("shades", "white");
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}
 
 
 

@@ -254,14 +254,13 @@ main {
 }
 
 .container-header {
-    background-color: color("dark-grey", "base");
-    border-radius: 6px 6px 0 0;
-    .title {
-      color: color("shades", "white");
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: bold;
-    }
+  background-color: color("dark-grey", "base");
+  border-radius: 6px 6px 0 0;
+  .title {
+    color: color("shades", "white");
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
   }
 }
 

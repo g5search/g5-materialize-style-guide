@@ -14,6 +14,19 @@ $universal-blue: (
 
 // CMS/Dashboard Basic Colors
 
+$turquoise: (
+  "base":       #0BADB0,
+  "lighten-5":  #C8FEFF,
+  "lighten-4":  #98FDFF,
+  "lighten-3":  #7DEBED,
+  "lighten-2":  #5BD4D6,
+  "lighten-1":  #17C7CA,
+  "darken-1":   #049D9F,
+  "darken-2":   #078B93,
+  "darken-3":   #05727B,
+  "darken-4":   #025E64
+);
+
 $blue: (
   "base":       #87D7FC,
   "lighten-5":  #E1F5FE,
@@ -356,6 +369,7 @@ $shades: (
 
 $colors: (
   "universal-blue": $universal-blue,
+  "turquoise": $turquoise,
   "blue": $blue,
   "green": $green,
   "red": $red,

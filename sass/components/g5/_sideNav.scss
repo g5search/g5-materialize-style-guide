@@ -2,12 +2,20 @@
   /* temp */
   // padding-top: 100px;
 
+  width: 266px !important;
+
 
   &.fixed {
+  
+
     a {
       display: block;
       width: 90%;
       margin-left: 5%;
+
+      color: color("grey", "lighten-1");
+      height: 38px;
+      line-height: 38px;
       i {
         padding-right: 12px;
       }
@@ -17,4 +25,8 @@
       }
     }
   }
+}
+
+.side-nav-secondary.fixed {
+  left: 266px;
 }

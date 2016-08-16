@@ -1,0 +1,20 @@
+// shared styles
+
+.btn,
+.btn-flat {
+  margin-right: 5px;
+}
+
+// specific button styles
+
+.btn.confirm {
+  background-color: color("turquoise", "base") !important;
+}
+
+.btn.new-page {
+  background-color: color("green", "base");
+  font-size: 0.8rem;
+  i {
+    font-size: 0.8rem;
+  }
+}

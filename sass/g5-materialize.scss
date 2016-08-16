@@ -12,9 +12,7 @@
 // Materialize defaults - do not edit!
 
 // Mixins
-// @import "components/prefixer";
 @import "components/mixins";
-@import "components/color";
 
 // Variables;
 @import "components/variables";
@@ -54,7 +52,10 @@
 
 // components
 @import "components/g5/global";
+@import "components/g5/grid";
 @import "components/g5/forms/forms";
 @import "components/g5/typography";
+@import "components/g5/buttons";
 @import "components/g5/preloader";
+@import "components/g5/chips";
 @import "components/g5/sideNav";

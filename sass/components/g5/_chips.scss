@@ -1,0 +1,75 @@
+.chip {
+  float: left;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: center;
+  width: 120px;
+
+  i {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: color("shades", "white");
+    font-size: 16px;
+    border-radius: 18px;
+    background-color: $chip-bg-color;
+    float: left;
+    margin-right: 8px;
+  }
+  span {
+    float: left;
+    font-size: 14px;
+  }
+  &:after { 
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+  }
+}
+
+
+// website status 
+.status-live .chip {
+  i {
+    background-color: color("green", "base");
+  }
+  span {
+    color: color("green", "base");
+  }
+}
+.status-pending .chip {
+  i {
+    background-color: color("blue", "base");
+  }
+  span {
+    color: color("blue", "base");
+  }
+}
+.status-no-deploy .chip {
+  i {
+    background-color: color("dark-grey", "base");
+  }
+  span {
+    color: color("dark-grey", "base");
+  }
+}
+.status-suspended .chip {
+  i {
+    background-color: color("red", "lighten-3");
+  }
+  span {
+    color: color("red", "lighten-3");
+  }
+}
+.status-deleted .chip {
+  i {
+    background-color: color("red", "darken-1");
+  }
+  span {
+    color: color("red", "darken-1");
+  }
+}
+

@@ -1,3 +1,19 @@
+/***************
+  HTML Styles
+***************/
+
+nav {
+  background-color: color("grey", "base");
+
+  ul li a:hover, ul li.active {
+    background-color: color("blue", "lighten-1");
+  }
+}
+
+header, main, footer, #preview {
+  padding-left: 266px !important;
+}
+
 /********************
   Index Page Styles
 ********************/
@@ -25,4 +41,19 @@ ul.side-nav.fixed {
       padding: 0 30px;
     }
   }
+}
+
+/********************
+  Style Header per Design
+********************/
+
+h2.header {
+  background-color: color("dark-grey", "base");
+  border-radius: 6px 6px 0 0;
+  color: color("shades", "white");
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
 }

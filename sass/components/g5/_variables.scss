@@ -36,7 +36,7 @@ $primary-color: color("universal-blue", "base") !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("dark-grey", "lighten-2") !default;
+$secondary-color: color("dark-grey", "base") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
@@ -45,6 +45,7 @@ $link-color: color("light-blue", "darken-1") !default;
    ========================================================================== */
 
 // Shared styles
+$button-padding: 0 1rem !default;
 $button-radius: 4px !default;
 
 
@@ -58,6 +59,19 @@ $switch-unchecked-bg: $secondary-color !default;
 $switch-unchecked-lever-bg: color("grey", "lighten-2") !default;
 $switch-radius: 0 !default;
 
+/* 11. Global
+   ========================================================================== */
+
+$very-large-screen: 1600px !default;
+
+$very-large-and-up: "only screen and (min-width : #{$very-large-screen})" !default;
+
+/* 13. Navigation Bar
+   ========================================================================== */
+
+$navbar-font-size: 1.1rem !default;
+$navbar-font-color: color("dark-grey", "base") !default;
+
 /* 14. Side Navigation
    ========================================================================== */
 
@@ -65,4 +79,15 @@ $sidenav-font-size: 15px !default;
 $sidenav-font-color: color("grey", "lighten-1") !default;
 $sidenav-bg-color: color("grey", "darken-3") !default;
 $sidenav-item-height: 38px !default;
+
+/* 21. Footer
+   ========================================================================== */
+
+$footer-bg-color: color("grey", "base") !default;
+
+/* 23. Collections
+   ========================================================================== */
+
+$collection-border-color: #c4c2c2 !default;
+// $collection-bg-color: color("dark-grey", "base") !default;
 

@@ -5,12 +5,6 @@
   margin-right: 5px;
 }
 
-// .btn, 
-// .btn-large, 
-// .btn-flat {
-//   line-height: 26px;
-// }
-
 // Shared icon styles
 .btn,
 .btn-floating,
@@ -21,6 +15,13 @@
   }
 }
 
+// set position for buttons outside collections
+.anchor-actions {
+  width: 100%;
+  text-align: right;
+  padding: 0 0 10px 0;
+}
+
 // specific button styles
 
 .btn.confirm {
@@ -28,13 +29,16 @@
 }
 
 .btn.new-page {
-  width: 100%;
-  max-width: 180px;
-  margin-left: calc(100% - 180px);
-  margin-bottom: 10px;
+  // width: 100%;
+  // max-width: 180px;
+  // margin-left: calc(100% - 180px);
   background-color: color("green", "base");
   font-size: 0.8rem;
   i {
     font-size: 0.8rem;
   }
+}
+
+.btn-publish-all {
+  margin-right: 15px;
 }

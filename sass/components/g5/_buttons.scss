@@ -5,10 +5,20 @@
   margin-right: 5px;
 }
 
-.btn, 
-.btn-large, 
+// .btn, 
+// .btn-large, 
+// .btn-flat {
+//   line-height: 26px;
+// }
+
+// Shared icon styles
+.btn,
+.btn-floating,
+.btn-large,
 .btn-flat {
-  line-height: 26px;
+  i {
+    font-size: 1rem;
+  }
 }
 
 // specific button styles

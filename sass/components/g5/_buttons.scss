@@ -40,6 +40,21 @@
   }
 }
 
+.btn.upload-files {
+  background-color: color("green", "base");
+  font-size: 1rem;
+  i {
+    font-size: 1rem;
+  }
+}
+
 .btn-publish-all {
   margin-right: 15px;
+}
+
+.btn.delete {
+  background-color: color("red", "base");
+  i {
+    font-size: 1.2rem;
+  }
 }

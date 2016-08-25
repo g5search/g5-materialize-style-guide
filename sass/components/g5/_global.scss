@@ -213,7 +213,7 @@
 // }
 
 // .pages.collection {
-//   margin: 0.5rem 0 1rem 0;
+//   margin: 0 0 1rem 0;
 //   border: none;
 //   border-radius: 2px;
 //   overflow: hidden;
@@ -299,6 +299,7 @@
 // }
 
 // .collection {
+//   margin: 0;
 //   &.with-header {
 //     border-radius: 6px;
 //     .collection-header {
@@ -332,9 +333,74 @@
 //   }
 // }
 
+// // assets page styles
+
+// .asset-thumbnail {
+//   width: 100%;
+//   max-width: 150px;
+//   display: inline-block;
+// }
+
+// .asset-url {
+//   margin-left: 50px;
+//   max-width: 50%;
+//   background-color: color("grey", "lighten-3");
+//   font-size: 0.8em;
+//   display: inline-block;
+//   vertical-align: top;
+//   padding: 20px;
+// }
+
+
+// // SKETCHY - verify 
+
+// #index-banner {
+//   background-color: color("dark-grey", "lighten-2") !important;
+// }
+
+// // custom styled sidebar
+
+// ul.side-nav.fixed {
+//   overflow: hidden;
+
+//   li {
+//     line-height: $sidenav-item-height;
+
+//     &.active {
+//       background-color: rgba(0,0,0,.05);
+//     }
+
+//     a {
+//       font-size: $sidenav-font-size;
+//       line-height: $sidenav-item-height;
+//       height: $sidenav-item-height;
+//       padding: 0 30px;
+//     }
+//   }
+// }
 
 
 
+// // was this a new add? 
+
+// .controls .sortable-item{
+//   border-top: 1px solid #e0e0e0;
+//   &.is-dragging{
+//     position: relative;
+//     z-index: 1;
+//   }
+// }
+
+// /* global form label position adjustment */
+// .input-field label {
+//   left: 0;
+// }
+
+// .themes .card{
+//   .card-title{
+//     font-size: 18px;
+//   }
+// }
 
 
 

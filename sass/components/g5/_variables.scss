@@ -83,6 +83,13 @@ $sidenav-font-color: color("grey", "lighten-1") !default;
 $sidenav-bg-color: color("grey", "darken-3") !default;
 $sidenav-item-height: 38px !default;
 
+/* 17. Tabs
+   ========================================================================== */
+
+$tabs-underline-color: $primary-color-light !default;
+$tabs-text-color: $primary-color !default;
+$tabs-bg-color: #fff !default;
+
 /* 21. Footer
    ========================================================================== */
 

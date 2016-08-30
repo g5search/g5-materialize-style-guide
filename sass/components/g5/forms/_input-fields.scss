@@ -96,3 +96,11 @@ textarea.materialize-textarea {
     }
   }
 }
+
+// negate form style for asset path display
+input[type=text] {
+  &.file-paths {
+    border: none;
+    background-color: transparent;
+  }
+}

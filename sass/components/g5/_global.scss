@@ -1,406 +1,426 @@
-// // Default styles
+// Default styles
 
-// body > .ember-view {
-//   display: flex;
-//   min-height: 100vh;
-//   flex-direction: column;
-//   background-color: #f2f2f2;
-// }
+body > .ember-view {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: color("light-grey", "base");
+}
 
-// main {
-//   flex: 1 0 auto;
-// }
+main {
+  flex: 1 0 auto;
+}
 
-// #preview {
-//   display: none;   
-// }
+#preview {
+  display: none;   
+}
 
-// // .side-nav-secondary.fixed{
-// //   left: 240px;
-// // }
+.website-page {
+  #preview {
+    display: block;   
+    flex: 1 0 auto;
+    iframe {
+      width: 100%;
+      height: inherit;
+      border: none;
+    }
+  }
+  footer {
+    margin-top: 0;
+  }
+  main {
+    display: none;
+  }
+}
 
-// // header, main, footer, #preview{
-// //   padding-left: 241px;
-// // }
+.liquid-container {
+  .liquid-child {
+    padding: 25px;
+  }
+}
+@media #{$very-large-and-up} {
+  .liquid-container {
+    .liquid-child {
+      padding: 25px 0;
+    }
+  }
+}
 
+.websites {
+  header, main, footer {
+    padding-left: 0;
+  } 
+}
 
-// .website-page {
-//   #preview {
-//     display: block;   
-//     flex: 1 0 auto;
-//     iframe {
-//       width: 100%;
-//       height: inherit;
-//       border: none;
-//     }
-//   }
-//   footer {
-//     margin-top: 0;
-//   }
-//   main {
-//     display: none;
-//   }
-// }
+#toast-container {
+  top: 0;
+  .toast {
+    &.success {
+      background-color: color("green", "base");
+    }
+    &.danger {
+      background-color: color("red", "base");
+    }
+  }
+}
 
-// .liquid-container{
-//   .liquid-child {
-//     padding: 25px;
-//   }
-// }
-// @media #{$very-large-and-up} {
-//   .liquid-container{
-//     .liquid-child {
-//       padding: 25px 0;
-//     }
-//   }
-// }
+/* global form label position adjustment */
+.input-field label {
+  left: 0; 
+}
 
-// .websites{
-//   header, main, footer{
-//     padding-left: 0;
-//   } 
-// }
+.themes .card {
+  .card-title {
+    font-size: 18px;
+  }
+}
 
-// #toast-container{
-//   top:0;
-//   .toast{
-//     &.success{
-//       background-color: green;
-//     }
-//     &.danger{
-//       background-color: red;
-//     }
-//   }
-// }
+.modal-content .collection .collection-item.avatar {
+  min-height: 35px;
+  padding-left: 55px;
+  .circle {
+    height: 30px;
+    width: 30px;
+    left: 10px;
+    top: 6px;
+  }
+}
 
+/* let's try some real shit */
 
-// /* global form label position adjustment */
-// .input-field label {
-//   left: 0; 
-// }
+/* The Parent Pages icon and text need a more defined relationship with each other. A parent container with class */
+.add-to-parent-action,
+.remove-from-parent-action {
+  padding: 10px 0 30px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
 
-// .themes .card{
-//   .card-title{
-//     font-size: 18px;
-//   }
-// }
+.select-wrapper input.select-dropdown {
+  border-bottom: 1px solid;
+  border-bottom-color: color("grey", "lighten-1");
+}
 
+/* How about the widget area? */
 
-// .modal-content .collection .collection-item.avatar{
-//   min-height: 35px;
-//   padding-left: 55px;
-//   .circle{
-//     height: 30px;
-//     width: 30px;
-//     left: 10px;
-//     top: 6px;
-//   }
-// }
-
-// /* let's try some real shit */
-
-
-
-
-// /* The Parent Pages icon and text need a more defined relationship with each other. A parent container with class */
-// .add-to-parent-action,
-// .remove-from-parent-action {
-//   padding: 10px 0 30px;
-//   display: block;
-//   width: 30px;
-//   height: 30px;
-//   cursor: pointer;
-// }
-// .select-wrapper input.select-dropdown {
-//   border-bottom: 1px solid;
-//   border-bottom-color: color("grey", "lighten-1");
-// }
-
-// /* How about the widget area? */
-
-// .add-widgets {
-//   border: 1px solid;
-//   border-color: color("grey", "lighten-2");
-//   -webkit-border-radius: 5px; 
-//   -moz-border-radius: 5px; 
-//   border-radius: 5px;
-//   background-color: color("shades", "white");
-//   padding: 20px;
-//   margin: 3%;
-// }
+.add-widgets {
+  border: 1px solid;
+  border-color: color("grey", "lighten-2");
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+  background-color: color("shades", "white");
+  padding: 20px;
+  margin: 3%;
+}
 
 
-// /* CREATE NEW PAGE button needs unique class */
+/* CREATE NEW PAGE button needs unique class */
 
-// /* modal h4 needs bottom padding to clear form field action */
+/* modal h4 needs bottom padding to clear form field action */
 
-// .modal-content {
-//   h4 {
-//     padding-bottom: 10px;
-//   }
-// }
+.modal-content {
+  h4 {
+    padding-bottom: 10px;
+  }
+}
+
+// BEGIN CLEAN STYLES
+
+// Breadcrumbs
+.breadcrumb {
+  font-size: 1rem;
+  &:before {
+    margin: 0;
+    color: color("grey", "darken-2");
+  }
+  &:last-child {
+    color: color("grey", "darken-3");
+  }
+  a {
+    display: inline-block;
+  }
+}
+
+// Collections
+
+.collection-item .liquid-child {
+  padding: 0;
+}
+
+.locations .collection {
+  li {
+    overflow: hidden;
+  }
+}
+
+.collection-item-container {
+  position: relative;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+
+  .widget-controls {
+    height: 30px;
+    width: 85px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  span i {
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .add {
+    color: color("green", "base");
+  }
+  .remove {
+    color: color("red", "base");
+  }
+  .count {
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+.redirects .collection {
+  .secondary-content {
+    float: none;
+  }
+  textarea {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.pages.collection {
+  margin: 0 0 1rem 0;
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  .collection-item {
+    background-color: color("shades", "white");
+    line-height: 2rem;
+    padding: 0;
+    border: none;
+    margin: 0;
+    position: relative;
+    display: block;
+    transition: all .13s;
+    &:last-child {
+      border-bottom: none;
+    }
+    &.is-dragging {
+      z-index: 10;
+      border-top: 1px solid;
+      border-color: color("grey", "lighten-2");
+      opacity: 0.8;
+    }
+    div {
+      &.grabber, .widget-grabber, &.no-grab {
+        float: left;
+        i {
+          padding: 14px;
+        }
+      }
+      &.grabber, .widget-grabber {
+        cursor: row-resize;
+      }
+      &.name {
+        padding: 10px 20px;
+        border-bottom: 1px solid;
+        border-color: color("grey", "lighten-2");
+      }
+    }
+    .settings-action {
+      i {
+        color: color("dark-grey", "base");
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .btn i {
+      color: color("shades", "white");
+    }
+    .add-widget-action i {
+      color: color("universal-blue", "base");
+      &:hover {
+        color: color("shades", "white");
+      }
+    }
+  }
+  li.disabled {
+    background-color: color("grey", "lighten-3");
+  }
+  .sub-group {
+    border-bottom: none;
+    background-color: color("grey", "lighten-4");
+    overflow: hidden;
+  }
+  .sub-item {
+    margin-left: 42px;
+    background-color: color("shades", "white");
+    &.is-dragging {
+      position: relative;
+      border-top: 1px solid;
+      border-color: color("grey", "lighten-2");
+    }
+  }
+  .secondary-content {
+    float: right;
+    margin-left: 15px;
+  }
+  .controls {
+    border-bottom: 1px solid;
+    border-color: color("grey", "lighten-2");
+    padding: 30px 20px;
+    background-color: color("grey", "lighten-4");
+    margin-bottom: 0;
+  }
+}
+
+// dial in collection styles
+.collection {
+  margin: 0;
+
+  &.with-header {
+    border-radius: 6px;
+    .collection-header {
+      background-color: color("dark-grey", "base");
+      border-radius: 6px 6px 0 0;
+      .title {
+        color: color("shades", "white");
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.container-header {
+  padding: 6px 20px;
+  background-color: color("dark-grey", "base");
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid;
+  border-color: color("grey", "base");
+  .title {
+    color: color("shades", "white");
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+// assets page styles
+
+.asset-thumbnail {
+  width: 100%;
+  max-width: 150px;
+  display: inline-block;
+}
+
+.asset-url {
+  margin-left: 50px;
+  max-width: 50%;
+  background-color: color("grey", "lighten-3");
+  font-size: 0.8em;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+}
 
 
+// SKETCHY - verify 
 
-// // BEGIN CLEAN STYLES
+#index-banner {
+  background-color: color("dark-grey", "lighten-2") !important;
+}
 
-// // Breadcrumbs
-// .breadcrumb {
-//   font-size: 1rem;
-//   &:before {
-//     margin: 0;
-//     color: color("grey", "darken-2");
-//   }
-//   &:last-child {
-//     color: color("grey", "darken-3");
-//   }
-//   a {
-//     display: inline-block;
-//   }
-// }
+// custom styled sidebar
 
+ul.side-nav.fixed {
+  overflow: hidden;
 
-// // Collections
+  li {
+    line-height: $sidenav-item-height;
 
-// .collection-item .liquid-child {
-//   padding: 0;
-// }
+    &.active {
+      background-color: rgba(0,0,0,.05);
+    }
 
-// .locations .collection {
-//   li {
-//     overflow: hidden;
-//   }
-// }
-
-// .collection-item-container {
-//   position: relative;
-//   -webkit-touch-callout: none; /* iOS Safari */
-//   -webkit-user-select: none;   /* Chrome/Safari/Opera */
-//   -khtml-user-select: none;    /* Konqueror */
-//   -moz-user-select: none;      /* Firefox */
-//   -ms-user-select: none;       /* Internet Explorer/Edge */
-//   user-select: none;           Non-prefixed version, currently not supported by any browser
-
-//   .widget-controls {
-//     height: 30px;
-//     width: 85px;
-//     position: absolute;
-//     top: 5px;
-//     right: 5px;
-//   }
-//   span i {
-//     font-size: 22px;
-//     cursor: pointer;
-//   }
-//   .add {color: green}
-//   .remove {color: red}
-//   .count {
-//     width: 30px;
-//     display: inline-block;
-//     text-align: center;
-//     font-size: 22px;
-//   }
-// }
-
-// .redirects .collection{
-//   .secondary-content{
-//     float: none;
-//   }
-//   textarea{
-//     padding: 0;
-//     margin: 0;
-//   }
-// }
-
-// .pages.collection {
-//   margin: 0 0 1rem 0;
-//   border: none;
-//   border-radius: 2px;
-//   overflow: hidden;
-//   position: relative;
-//   background-color: #F3F8FB;
-//   display: block;
-//   .collection-item {
-//     background-color: #fff;
-//     line-height: 2rem;
-//     padding: 0;
-//     border: none;
-//     margin: 0;
-//     position: relative;
-//     display: block;
-//     transition: all .13s;
-//     &:last-child {
-//       border-bottom: none;
-//     }
-//     &.is-dragging {
-//       z-index: 10;
-//       border-top: 1px solid #e0e0e0;
-//       opacity: 0.8;
-//     }
-//     div{
-//       &.grabber, .widget-grabber, &.no-grab {
-//         float:left;
-//         i {
-//           padding: 14px;
-//         }
-//       }
-//       &.grabber, .widget-grabber{
-//         cursor: row-resize;
-//       }
-//       &.name {
-//         padding: 10px 20px;
-//         border-bottom: 1px solid #e0e0e0;
-//       }
-//     }
-//     .settings-action {
-//       i {
-//         color: #2a2a2a;
-//       }
-//       &:hover {
-//         cursor: pointer;
-//       }
-//     }
-//     .btn i {
-//       color: color("shades", "white");
-//     }
-//     .add-widget-action i{
-//       color: #6dbde2;
-//       &:hover{
-//         color: #ffffff;
-//       }
-//     }
-//   }
-//   li.disabled{
-//     background-color: #ededed;
-//   }
-//   .sub-group{
-//     border-bottom: none;
-//     background-color: color("grey", "lighten-4");
-//     overflow: hidden;
-//   }
-//   .sub-item{
-//     margin-left: 42px;
-//     background-color: #fff;
-//     &.is-dragging{
-//       position: relative;
-//       border-top: 1px solid #e0e0e0;
-//     }
-//   }
-//   .secondary-content {
-//     float: right;
-//     margin-left: 15px;
-//   }
-//   .controls {
-//     border-bottom: 1px solid #e0e0e0;
-//     padding: 30px 20px;
-//     background-color: color("grey", "lighten-4");
-//     margin-bottom: 0;
-//   }
-// }
-
-// .collection {
-//   margin: 0;
-//   &.with-header {
-//     border-radius: 6px;
-//     .collection-header {
-//       background-color: color("dark-grey", "base");
-//       border-radius: 6px 6px 0 0;
-//       .title {
-//         color: color("shades", "white");
-//         text-transform: uppercase;
-//         font-size: 18px;
-//         font-weight: bold;
-//       }
-//     }
-//   }
-//   .collection-item {
-//     // line-height: 1.5rem;
-//     // padding: 10px 20px 20px 20px;
-//   }
-// }
-
-// .container-header {
-//   padding: 6px 20px;
-//   background-color: color("dark-grey", "base");
-//   border-radius: 6px 6px 0 0;
-//   border-bottom: 1px solid #c4c2c2;
-//   .title {
-//     color: color("shades", "white");
-//     text-transform: uppercase;
-//     font-size: 18px;
-//     font-weight: bold;
-//     text-align: center;
-//   }
-// }
-
-// // assets page styles
-
-// .asset-thumbnail {
-//   width: 100%;
-//   max-width: 150px;
-//   display: inline-block;
-// }
-
-// .asset-url {
-//   margin-left: 50px;
-//   max-width: 50%;
-//   background-color: color("grey", "lighten-3");
-//   font-size: 0.8em;
-//   display: inline-block;
-//   vertical-align: top;
-//   padding: 20px;
-// }
-
-
-// // SKETCHY - verify 
-
-// #index-banner {
-//   background-color: color("dark-grey", "lighten-2") !important;
-// }
-
-// // custom styled sidebar
-
-// ul.side-nav.fixed {
-//   overflow: hidden;
-
-//   li {
-//     line-height: $sidenav-item-height;
-
-//     &.active {
-//       background-color: rgba(0,0,0,.05);
-//     }
-
-//     a {
-//       font-size: $sidenav-font-size;
-//       line-height: $sidenav-item-height;
-//       height: $sidenav-item-height;
-//       padding: 0 30px;
-//     }
-//   }
-// }
+    a {
+      font-size: $sidenav-font-size;
+      line-height: $sidenav-item-height;
+      height: $sidenav-item-height;
+      padding: 0 30px;
+    }
+  }
+}
 
 
 
-// // was this a new add? 
+// was this a new add? 
 
-// .controls .sortable-item{
-//   border-top: 1px solid #e0e0e0;
-//   &.is-dragging{
-//     position: relative;
-//     z-index: 1;
-//   }
-// }
+.controls .sortable-item {
+  border-top: 1px solid;
+  border-color: color("grey", "lighten-2");
+  &.is-dragging {
+    position: relative;
+    z-index: 1;
+  }
+}
 
-// /* global form label position adjustment */
-// .input-field label {
-//   left: 0;
-// }
+/* global form label position adjustment */
+.input-field label {
+  left: 0;
+}
 
-// .themes .card{
-//   .card-title{
-//     font-size: 18px;
-//   }
-// }
+.themes .card {
+  .card-title {
+    font-size: 18px;
+  }
+}
+
+@media #{$mega-large-and-down} {
+  .website {
+    main, footer, #preview {
+      padding-left: 266px;
+    }
+  }
+  .websites {
+    header, main, footer, #preview {
+      padding-left: 0;
+    }
+  }
+}
+.website {
+  header {
+    padding-left: 266px;
+  }
+}
+
+.seos {
+  .seo-editor {
+    padding: 0 20px;
+  }
+  table.save-files {
+    width: 98%;
+    padding: 0 1%;
+    margin: 0 auto;
+  }
+}
 
 
 

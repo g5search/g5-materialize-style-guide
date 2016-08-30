@@ -1,34 +1,26 @@
 .side-nav {
-  /* temp */
-  // padding-top: 100px;
 
   width: 266px !important;
-
-
-  &.fixed {
-  
-
-    a {
-      display: block;
-      width: 90%;
-      margin: 10px 0 10px 5%;
-      font-size: 1.1em !important;
-      color: color("grey", "lighten-1");
-      height: 38px;
-      line-height: 38px;
+  a {
+    display: block;
+    width: 90%;
+    margin: 10px 0 10px 5%;
+    font-size: 1.1em !important;
+    color: color("grey", "lighten-1");
+    height: 38px;
+    line-height: 38px;
+    &.active {
+      background-color: color("blue", "base");
+      color: color("shades", "white");
       i {
-        font-size: 1.1em !important;
-        padding-right: 12px;
-        color: color("grey", "lighten-1");
-      }
-      &.active {
-        background-color: color("blue", "base");
-        color: color("shades", "white");
-        i {
-          color: color("shades", "white") !important;
-        }
+        color: color("shades", "white") !important;
       }
     }
+  }
+  li > a > i {
+    font-size: 1.1em !important;
+    padding-right: 12px;
+    color: color("grey", "lighten-1");
   }
 }
 

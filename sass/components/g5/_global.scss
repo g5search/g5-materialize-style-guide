@@ -435,6 +435,17 @@ ul.side-nav.fixed {
   }
 }
 
+// let's figure out how to cleanly align disparate elements
+.display-inline {
+  display: inline;
+}
+
+.page-status-element {
+  .switch {
+    padding-left: 20px;
+  }
+}
+
 
 
 

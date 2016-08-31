@@ -202,7 +202,7 @@ main {
 
 .pages.collection {
   margin: 0 0 1rem 0;
-  border: none;
+  border: 1px solid $collection-border-color;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
@@ -225,6 +225,13 @@ main {
       border-color: color("grey", "lighten-2");
       opacity: 0.8;
     }
+    &.panel-active {
+      background-color: transparent;
+      div.name {
+        font-weight: 600;
+        border-bottom: 0;
+      }
+    }
     div {
       &.grabber, .widget-grabber, &.no-grab {
         float: left;
@@ -239,6 +246,9 @@ main {
         padding: 10px 20px;
         border-bottom: 1px solid;
         border-color: color("grey", "lighten-2");
+        i {
+          font-size: 1.2em;
+        }
       }
     }
     .settings-action {
@@ -286,6 +296,9 @@ main {
     padding: 30px 20px;
     background-color: color("grey", "lighten-4");
     margin-bottom: 0;
+    .nav-pages-left {
+      padding-top: 14px;
+    }
   }
 }
 

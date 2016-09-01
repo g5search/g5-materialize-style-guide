@@ -263,7 +263,7 @@ main {
       color: color("shades", "white");
     }
     .add-widget-action i {
-      color: color("universal-blue", "base");
+      color: color("shades", "white");
       &:hover {
         color: color("shades", "white");
       }
@@ -361,27 +361,6 @@ main {
   background-color: color("dark-grey", "lighten-2") !important;
 }
 
-// custom styled sidebar
-
-ul.side-nav.fixed {
-  overflow: hidden;
-
-  li {
-    line-height: $sidenav-item-height;
-
-    &.active {
-      background-color: rgba(0,0,0,.05);
-    }
-
-    a {
-      font-size: $sidenav-font-size;
-      line-height: $sidenav-item-height;
-      height: $sidenav-item-height;
-      padding: 0 30px;
-    }
-  }
-}
-
 
 
 // was this a new add? 
@@ -443,6 +422,33 @@ ul.side-nav.fixed {
 .page-status-element {
   .switch {
     padding-left: 20px;
+  }
+}
+
+.top-padding {
+  padding-top: 1em !important;
+}
+
+// locations page headings styles - temporary until city, state is added
+.locations-headings {
+  background-color: color("shades", "white");
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: $collection-border-color;
+  line-height: 50px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: 600;
+    &.name {
+      padding-left: 20px;
+    }
+    &.status {
+      padding-left: 59%;
+    }
   }
 }
 

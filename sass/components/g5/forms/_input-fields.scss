@@ -93,6 +93,9 @@ textarea.materialize-textarea {
       font-size: 1em;
       padding-bottom: 5px;
       font-weight: 400;
+      .website-index & {
+        padding-bottom: 0;
+      }
     }
   }
 }

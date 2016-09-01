@@ -5,10 +5,10 @@
     display: block;
     width: 90%;
     margin: 10px 0 10px 5%;
-    font-size: 1.1em !important;
-    color: color("grey", "lighten-1");
-    height: 38px;
-    line-height: 38px;
+    font-size: $sidenav-font-size;
+    color: $sidenav-font-color;
+    line-height: $sidenav-item-height;
+    height: $sidenav-item-height;
     &.active {
       background-color: color("blue", "base");
       color: color("shades", "white");
@@ -41,3 +41,4 @@
     }
   }
 }
+

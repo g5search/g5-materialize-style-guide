@@ -452,7 +452,46 @@ main {
   }
 }
 
+// sigh... now widget edit is also in secondary column but using wormhole (so same as navigation pages)
 
+.website-page {
+  .side-nav-secondary {
+    .active {
+      background-color: color("grey", "base");
+      padding: 16px;
+    }
+    h6.widget-heading {
+      padding: 10px 0;
+      span {
+        display: none;
+      }
+      &:after {
+        content: "Page Edits";
+        font-size: 1.2em;
+      }
+    }
+    &.side-nav {
+      a.btn {
+        color: color("shades", "white");
+      }
+    }
+    .collection {
+      .collection-item {
+        padding: 10px 5px;
+        .widget-grabber,
+        .name {
+          display: inline;
+        }
+        .secondary-content {
+          padding-left: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 

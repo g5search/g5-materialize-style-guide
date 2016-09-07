@@ -399,7 +399,7 @@ main {
 }
 .website {
   header {
-    padding-left: 266px;
+    // padding-left: 266px;
   }
 }
 
@@ -491,6 +491,25 @@ main {
       }
     }
   }
+}
+
+// Hide the submit button on widget edit panel form in favor
+// of the one we render with ember
+form.edit_widget input.save-btn {
+  display:none;
+}
+
+// Footer
+footer.page-footer {
+  height: 64px;
+  padding-top: 0;
+}
+
+
+// test ability to affect other elements with activated secondary nav
+
+#side-nav-secondary ul.side-nav-secondary.activated + header {
+  border: 10px solid red;
 }
 
 

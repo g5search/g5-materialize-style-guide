@@ -1,6 +1,8 @@
 .side-nav {
 
+  margin-top: 64px;
   width: 266px !important;
+  margin-bottom: 100px;
   a {
     display: block;
     width: 90%;
@@ -16,6 +18,11 @@
         color: color("shades", "white") !important;
       }
     }
+  }
+  li:first-of-type {
+    font-size: 1.5em;
+    color: color("grey", "lighten-1");
+    margin: 15px 25px;
   }
   li > a > i {
     font-size: 1.1em !important;

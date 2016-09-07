@@ -2,8 +2,3 @@ nav {
   background-color: color("grey", "lighten-1");
 }
 
-@media #{$mega-large-and-down} {
-  .nav-wrapper {
-    // padding-left: 280px;
-  }
-}

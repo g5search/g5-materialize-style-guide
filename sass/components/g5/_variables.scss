@@ -72,6 +72,7 @@ $very-large-and-up: "only screen and (min-width : #{$very-large-screen})" !defau
 /* 13. Navigation Bar
    ========================================================================== */
 
+$navbar-height: 64px !default;
 $navbar-font-size: 1.1rem !default;
 $navbar-font-color: color("dark-grey", "base") !default;
 
@@ -93,7 +94,7 @@ $tabs-bg-color: #fff !default;
 /* 21. Footer
    ========================================================================== */
 
-$footer-bg-color: color("grey", "base") !default;
+$footer-bg-color: color("dark-grey", "base") !default;
 
 /* 23. Collections
    ========================================================================== */

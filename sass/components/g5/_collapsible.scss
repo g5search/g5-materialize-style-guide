@@ -1,0 +1,16 @@
+.collapsible-header {
+  font-size: 1.2em;
+  color: color("grey", "base");
+  &.active {
+    color: color("dark-grey", "base");
+    i {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+  i {
+    font-size: 1em;
+    float: right;
+  }
+}

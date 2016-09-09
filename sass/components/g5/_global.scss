@@ -12,12 +12,12 @@ main {
 }
 
 #preview {
-  display: none;   
+  display: none;
 }
 
 .website-page {
   #preview {
-    display: block;   
+    display: block;
     flex: 1 0 auto;
     iframe {
       width: 100%;
@@ -49,7 +49,7 @@ main {
 .websites {
   header, main, footer {
     padding-left: 0;
-  } 
+  }
 }
 
 #toast-container {
@@ -66,7 +66,7 @@ main {
 
 /* global form label position adjustment */
 .input-field label {
-  left: 0; 
+  left: 0;
 }
 
 .themes .card {
@@ -108,8 +108,8 @@ main {
 .add-widgets {
   border: 1px solid;
   border-color: color("grey", "lighten-2");
-  -webkit-border-radius: 5px; 
-  -moz-border-radius: 5px; 
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: color("shades", "white");
   padding: 20px;
@@ -355,7 +355,7 @@ main {
 }
 
 
-// SKETCHY - verify 
+// SKETCHY - verify
 
 #index-banner {
   background-color: color("dark-grey", "lighten-2") !important;
@@ -363,7 +363,7 @@ main {
 
 
 
-// was this a new add? 
+// was this a new add?
 
 .controls .sortable-item {
   border-top: 1px solid;
@@ -461,23 +461,25 @@ main {
       padding: 16px;
     }
     h6.widget-heading {
-      padding: 10px 0;
-      span {
-        display: none;
-      }
-      &:after {
-        content: "Page Edits";
-        font-size: 1.2em;
-      }
+      padding: 10px 7px;
+      font-weight: 600;
     }
     &.side-nav {
       a.btn {
         color: color("shades", "white");
       }
     }
+    .collapsible-body {
+      margin: 10px;
+      padding: 10px 0;
+       p {
+        padding: 0;
+        margin: 0;
+      }
+    }
     .collection {
-      .collection-item {
-        padding: 10px 5px;
+      .sortable-item {
+        padding: 0 7px;
         .widget-grabber,
         .name {
           display: inline;
@@ -506,23 +508,10 @@ footer.page-footer {
 }
 
 
-// test ability to affect other elements with activated secondary nav
+// style the secondary nav
 
-#side-nav-secondary ul.side-nav-secondary.activated + header {
-  border: 10px solid red;
+// #side-nav-secondary ul.side-nav-secondary.activated
+
+.side-nav-secondary {
+  background-color: color("dark-grey", "lighten-2");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

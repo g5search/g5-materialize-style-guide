@@ -1,12 +1,17 @@
 .modal {
-  background: linear-gradient(to bottom, #2a2a2a 0,#2a2a2a 60px,#000000 60px,white 61px,white 100%);
+  // background: linear-gradient(to bottom, #2a2a2a 0,#2a2a2a 60px,#000000 60px,white 61px,white 100%);
 
   h4 {
-    margin: 0 !important;
-    padding: 0 !important;
     font-size: 1.2em;
     color: white;
     text-transform: uppercase;
+    display: block;
+    width: calc(100% + 50px);
+    height: 50px;
+    line-height: 50px;
+    margin: -25px !important;
+    background-color: color("dark-grey", "base");
+    text-indent: 25px;
   }
 
   .btn {
@@ -14,6 +19,10 @@
   }
 
   form {
-    margin-top: 25px;
+    margin-top: 35px;
   }
+}
+
+.modal-content {
+  overflow: hidden;
 }

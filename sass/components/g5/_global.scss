@@ -306,6 +306,10 @@ main {
 .collection {
   margin: 0;
 
+  &.widget-group {
+    background-color: color("shades", "white");
+  }
+
   &.with-header {
     border-radius: 6px;
     .collection-header {

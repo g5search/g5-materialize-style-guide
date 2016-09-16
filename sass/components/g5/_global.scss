@@ -450,8 +450,11 @@ main {
     &.name {
       padding-left: 20px;
     }
+    &.location {
+      padding-left: 32%;
+    }
     &.status {
-      padding-left: 59%;
+      padding-left: 15%;
     }
   }
 }
@@ -518,4 +521,58 @@ footer.page-footer {
 
 .side-nav-secondary {
   background-color: color("dark-grey", "lighten-2");
+}
+
+// Locations sort row
+.sort-locations {
+  background-color: color("grey", "lighten-1");
+  height: 55px;
+  .select-wrapper {
+    margin: -16px 0 0 20px;
+    max-width: 340px;
+    padding-top: 4px;
+  }
+  input,.select-dropdown {
+
+  }
+}
+
+.secondary-content.locations-page {
+  max-width: 800px;
+  width: 100%;
+}
+.button-container {
+  float: right;
+  width: 40%;
+}
+.chip.status {
+  float: left;
+  width: 25%;
+}
+.city-state {
+  float: left;
+  width: 35%;
+}
+
+
+.collection-item {
+  // border: 1px solid red !important;
+  // z-index: 1 !important;
+  // position: relative !important;
+  // overflow: visible !important;
+  .input-field.md-select {
+    // border: 1px solid green !important;
+    // position: relative !important;
+    // z-index: 9999999999999 !important;
+    .select-wrapper  {
+      // border: 1px solid orange !important;
+      // position: relative !important;
+      // z-index: 9999999999999 !important;
+      .dropdown-content {
+        // border: 3px solid blue !important;
+        // position: relative !important;
+        // z-index: 9999999999999 !important;
+      }
+    }
+  }
 }

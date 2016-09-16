@@ -433,34 +433,7 @@ main {
   padding-top: 1em !important;
 }
 
-// locations page headings styles - temporary until city, state is added
-.locations-headings {
-  background-color: color("shades", "white");
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-color: $collection-border-color;
-  line-height: 50px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  li {
-    display: inline;
-    text-transform: uppercase;
-    font-weight: 600;
-    &.name {
-      padding-left: 20px;
-    }
-    &.location {
-      padding-left: 32%;
-    }
-    &.status {
-      padding-left: 15%;
-    }
-  }
-}
-
 // sigh... now widget edit is also in secondary column but using wormhole (so same as navigation pages)
-
 .website-page {
   .side-nav-secondary {
     .active {
@@ -516,7 +489,6 @@ footer.page-footer {
 
 
 // style the secondary nav
-
 // #side-nav-secondary ul.side-nav-secondary.activated
 
 .side-nav-secondary {
@@ -537,24 +509,61 @@ footer.page-footer {
   }
 }
 
-.secondary-content.locations-page {
-  max-width: 800px;
-  width: 100%;
+// locations page styles
+.locations-headings {
+  background-color: color("shades", "white");
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: $collection-border-color;
+  line-height: 50px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline;
+    text-transform: uppercase;
+    font-weight: 600;
+    &.name {
+      padding-left: 20px;
+    }
+    &.location {
+      padding-left: 31%;
+    }
+    &.status {
+      padding-left: 15%;
+    }
+  }
 }
+
+.collection.locations {
+
+  .title {
+    float: left;
+    width: 35%;
+  }
+
+  .secondary-content {
+    width: 65%;
+  }
+
+}
+
 .button-container {
   float: right;
-  width: 40%;
+  text-align: right;
+  width: 43%;
 }
 .chip.status {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 .city-state {
   float: left;
-  width: 35%;
+  width: 34%;
 }
 
 
+// explore if we can correctly use select with liquid fire
 .collection-item {
   // border: 1px solid red !important;
   // z-index: 1 !important;

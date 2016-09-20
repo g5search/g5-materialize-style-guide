@@ -403,7 +403,7 @@ main {
 }
 .website {
   header {
-    // padding-left: 266px;
+    padding-left: 266px;
   }
 }
 
@@ -583,5 +583,61 @@ footer.page-footer {
         // z-index: 9999999999999 !important;
       }
     }
+  }
+}
+
+// kill box shadow for global components until I find the right way to handle
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .dropdown-content, .collapsible, .side-nav, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-large, .dropdown-content, .collapsible, .side-nav {
+    box-shadow: none !important;
+}
+
+// website index page needs unique styling for commong website-row template
+.website-index {
+  .liquid-container .liquid-child {
+    padding: 0 25px 25px 25px !important;
+  }
+  ul, li {
+    list-style-type: none !important;
+  }
+  .website-index-row {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: color("grey", "lighten-1");
+    margin-top: 1px;
+    border-top: 1px solid;
+    border-color: color("grey", "lighten-3");
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      background: color("dark-grey", "lighten-2");
+      margin-top: -2px;
+    }
+    .title {
+      float: left;
+      padding-left: 40px;
+      width: 40%;
+      .corporate {
+        font-weight: 600;
+      }
+      .last-published {
+        font-style: italic;
+      }
+    }
+    .secondary-content {
+      position: absolute;
+      width: 60%;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.websites {
+  span.corporate {
+    display: block;
+    font-weight: 600;
   }
 }

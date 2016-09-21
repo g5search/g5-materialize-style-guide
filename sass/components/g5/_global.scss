@@ -592,10 +592,12 @@ footer.page-footer {
 }
 
 // website index page needs unique styling for commong website-row template
-.website-index {
-  .liquid-container .liquid-child {
-    padding: 0 25px 25px 25px !important;
-  }
+.website-index,
+.website-assets,
+.website-themes,
+.website-seos,
+.website-redirects,
+.website-saves {
   ul, li {
     list-style-type: none !important;
   }
@@ -607,6 +609,7 @@ footer.page-footer {
     margin-top: 1px;
     border-top: 1px solid;
     border-color: color("grey", "lighten-3");
+    margin-top: -24px;
     &:before {
       content: "";
       display: block;
@@ -631,6 +634,16 @@ footer.page-footer {
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
+    }
+  }
+}
+
+.website-index {
+  .website-index-row {
+    .secondary-content {
+      .edit-button {
+        display: none;
+      }
     }
   }
 }

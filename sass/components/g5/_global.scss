@@ -325,6 +325,11 @@ main {
   }
 }
 
+// widget name editing - maybe too general
+.name .title:hover {
+  cursor: pointer;
+}
+
 .container-header {
   padding: 6px 20px;
   background-color: color("dark-grey", "base");

@@ -107,3 +107,10 @@ input[type=text] {
     background-color: transparent;
   }
 }
+
+.website-redirects {
+  textarea.materialize-textarea {
+    overflow-y: scroll;
+    padding-left: 20px;
+  }
+}

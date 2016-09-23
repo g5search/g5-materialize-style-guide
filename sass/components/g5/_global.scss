@@ -275,7 +275,7 @@ main {
   .sub-group {
     border-bottom: none;
     background-color: color("grey", "lighten-4");
-    overflow: hidden;
+    // overflow: hidden;
   }
   .sub-item {
     margin-left: 42px;
@@ -536,16 +536,13 @@ footer.page-footer {
 }
 
 .collection.locations {
-
   .title {
     float: left;
     width: 35%;
   }
-
   .secondary-content {
     width: 65%;
   }
-
 }
 
 .button-container {

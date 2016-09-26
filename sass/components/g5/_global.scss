@@ -1,671 +1,680 @@
-// Default styles
-
-body > .ember-view {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: color("light-grey", "base");
-}
-
-main {
-  flex: 1 0 auto;
-}
-
-#preview {
-  display: none;
-}
-
-.website-page {
-  #preview {
-    display: block;
-    flex: 1 0 auto;
-    iframe {
-      width: 100%;
-      height: inherit;
-      border: none;
-    }
-  }
-  footer {
-    margin-top: 0;
-  }
-  main {
-    display: none;
-  }
-}
-
-.liquid-container {
-  .liquid-child {
-    padding: 25px;
-  }
-}
-@media #{$very-large-and-up} {
-  .liquid-container {
-    .liquid-child {
-      padding: 25px 0;
-    }
-  }
-}
-
-.websites {
-  header, main, footer {
-    padding-left: 0;
-  }
-}
-
-#toast-container {
-  top: 0;
-  .toast {
-    &.success {
-      background-color: color("green", "base");
-    }
-    &.danger {
-      background-color: color("red", "base");
-    }
-  }
-}
-
-/* global form label position adjustment */
-.input-field label {
-  left: 0;
-}
-
-.themes .card {
-  .card-title {
-    font-size: 18px;
-  }
-}
-
-.modal-content .collection .collection-item.avatar {
-  min-height: 35px;
-  padding-left: 55px;
-  .circle {
-    height: 30px;
-    width: 30px;
-    left: 10px;
-    top: 6px;
-  }
-}
-
-/* let's try some real shit */
-
-/* The Parent Pages icon and text need a more defined relationship with each other. A parent container with class */
-.add-to-parent-action,
-.remove-from-parent-action {
-  padding: 10px 0 30px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.select-wrapper input.select-dropdown {
-  border-bottom: 1px solid;
-  border-bottom-color: color("grey", "lighten-1");
-}
-
-/* How about the widget area? */
-
-.add-widgets {
-  border: 1px solid;
-  border-color: color("grey", "lighten-2");
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background-color: color("shades", "white");
-  padding: 20px;
-  margin: 3%;
-}
-
-
-/* CREATE NEW PAGE button needs unique class */
-
-/* modal h4 needs bottom padding to clear form field action */
-
-.modal-content {
-  h4 {
-    padding-bottom: 10px;
-  }
-}
-
-// BEGIN CLEAN STYLES
-
-// Breadcrumbs
-.breadcrumb {
-  font-size: 1rem;
-  &:before {
-    margin: 0;
-    color: color("grey", "darken-2");
-  }
-  &:last-child {
-    color: color("grey", "darken-3");
-  }
-  a {
-    display: inline-block;
-  }
-}
-
-// Collections
-
-.collection-item .liquid-child {
-  padding: 0;
-}
-
-.locations .collection {
-  li {
-    overflow: hidden;
-  }
-}
-
-.collection-item-container {
-  position: relative;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently not supported by any browser */
-
-  .widget-controls {
-    height: 30px;
-    width: 85px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-  }
-  span i {
-    font-size: 22px;
-    cursor: pointer;
-  }
-  .add {
-    color: color("green", "base");
-  }
-  .remove {
-    color: color("red", "base");
-  }
-  .count {
-    width: 30px;
-    display: inline-block;
-    text-align: center;
-    font-size: 22px;
-  }
-}
-
-.redirects .collection {
-  .secondary-content {
-    float: none;
-  }
-  textarea {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.pages.collection {
-  margin: 0 0 1rem 0;
-  border: 1px solid $collection-border-color;
-  border-radius: 2px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-  .collection-item {
-    background-color: color("shades", "white");
-    line-height: 2rem;
-    padding: 0;
-    border: none;
-    margin: 0;
-    position: relative;
-    display: block;
-    transition: all .13s;
-    &:last-child {
-      border-bottom: none;
-    }
-    &.is-dragging {
-      z-index: 10;
-      border-top: 1px solid;
-      border-color: color("grey", "lighten-2");
-      opacity: 0.8;
-    }
-    &.panel-active {
-      background-color: transparent;
-      div.name {
-        font-weight: 600;
-        border-bottom: 0;
-      }
-    }
-    div {
-      &.grabber, .widget-grabber, &.no-grab {
-        float: left;
-        i {
-          padding: 14px;
-        }
-      }
-      &.grabber, .widget-grabber {
-        cursor: row-resize;
-      }
-      &.name {
-        padding: 10px 20px;
-        border-bottom: 1px solid;
-        border-color: color("grey", "lighten-2");
-        i {
-          font-size: 1.2em;
-        }
-      }
-    }
-    .settings-action {
-      i {
-        color: color("dark-grey", "base");
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
-    .btn i {
-      color: color("shades", "white");
-    }
-    .add-widget-action i {
-      color: color("shades", "white");
-      &:hover {
-        color: color("shades", "white");
-      }
-    }
-  }
-  li.disabled {
-    background-color: color("grey", "lighten-3");
-  }
-  .sub-group {
-    border-bottom: none;
-    background-color: color("grey", "lighten-4");
-    // overflow: hidden;
-  }
-  .sub-item {
-    margin-left: 42px;
-    background-color: color("shades", "white");
-    &.is-dragging {
-      position: relative;
-      border-top: 1px solid;
-      border-color: color("grey", "lighten-2");
-    }
-  }
-  .secondary-content {
-    float: right;
-    margin-left: 15px;
-  }
-  .controls {
-    border-bottom: 1px solid;
-    border-color: color("grey", "lighten-2");
-    padding: 30px 20px;
-    background-color: color("grey", "lighten-4");
-    margin-bottom: 0;
-    .nav-pages-left {
-      padding-top: 14px;
-    }
-  }
-}
-
-// dial in collection styles
-.collection {
-  margin: 0;
-
-  &.widget-group {
-    background-color: color("shades", "white");
-  }
-
-  &.with-header {
-    border-radius: 6px;
-    .collection-header {
-      background-color: color("dark-grey", "base");
-      border-radius: 6px 6px 0 0;
-      .title {
-        color: color("shades", "white");
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 600;
-      }
-    }
-  }
-}
-
-// widget name editing - maybe too general
-.name .title:hover {
-  cursor: pointer;
-}
-
-.container-header {
-  padding: 6px 20px;
-  background-color: color("dark-grey", "base");
-  border-radius: 6px 6px 0 0;
-  border-bottom: 1px solid;
-  border-color: color("grey", "base");
-  .title {
-    color: color("shades", "white");
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: center;
-  }
-}
-
-// assets page styles
-
-.asset-thumbnail {
-  width: 100%;
-  max-width: 150px;
-  display: inline-block;
-}
-
-.asset-url {
-  margin-left: 50px;
-  max-width: 50%;
-  background-color: color("grey", "lighten-3");
-  font-size: 0.8em;
-  display: inline-block;
-  vertical-align: top;
-  padding: 20px;
-}
-
-
-// SKETCHY - verify
-
-#index-banner {
-  background-color: color("dark-grey", "lighten-2") !important;
-}
-
-
-
-// was this a new add?
-
-.controls .sortable-item {
-  border-top: 1px solid;
-  border-color: color("grey", "lighten-2");
-  &.is-dragging {
-    position: relative;
-    z-index: 1;
-  }
-}
-
-/* global form label position adjustment */
-.input-field label {
-  left: 0;
-}
-
-.themes .card {
-  .card-title {
-    font-size: 18px;
-  }
-}
-
-@media #{$mega-large-and-down} {
-  .website {
-    main, footer, #preview {
-      padding-left: 266px;
-    }
-  }
-  .websites {
-    header, main, footer, #preview {
-      padding-left: 0;
-    }
-  }
-}
-.website {
-  header {
-    padding-left: 266px;
-  }
-}
-
-.seos {
-  .seo-editor {
-    padding: 0 20px;
-  }
-  table.save-files {
-    width: 98%;
-    padding: 0 1%;
-    margin: 0 auto;
-  }
-}
-
-// let's figure out how to cleanly align disparate elements
-.display-inline {
-  display: inline;
-}
-
-.page-status-element {
-  .switch {
-    padding-left: 20px;
-  }
-}
-
-.top-padding {
-  padding-top: 1em !important;
-}
-
-// sigh... now widget edit is also in secondary column but using wormhole (so same as navigation pages)
-.website-page {
-  .side-nav-secondary {
-    .active {
-      background-color: color("grey", "base");
-      padding: 16px;
-    }
-    h6.widget-heading {
-      padding: 10px 7px;
-      font-weight: 600;
-    }
-    &.side-nav {
-      a.btn {
-        color: color("shades", "white");
-      }
-    }
-    .collapsible-body {
-      margin: 10px;
-      padding: 10px 0;
-       p {
-        padding: 0;
-        margin: 0;
-      }
-    }
-    .collection {
-      .sortable-item {
-        padding: 0 7px;
-        .widget-grabber,
-        .name {
-          display: inline;
-        }
-        .secondary-content {
-          padding-left: 5px;
-          &:hover {
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Hide the submit button on widget edit panel form in favor
-// of the one we render with ember
-form.edit_widget input.save-btn {
-  display:none;
-}
-
-// Footer
-footer.page-footer {
-  height: 64px;
-  padding-top: 0;
-}
-
-
-// style the secondary nav
-// #side-nav-secondary ul.side-nav-secondary.activated
-
-.side-nav-secondary {
-  background-color: color("dark-grey", "lighten-2");
-}
-
-// Locations sort row
-.sort-locations {
-  background-color: color("grey", "lighten-1");
-  height: 55px;
-  .select-wrapper {
-    margin: -16px 0 0 20px;
-    max-width: 340px;
-    padding-top: 4px;
-  }
-  input,.select-dropdown {
-
-  }
-}
-
-// locations page styles
-.locations-headings {
-  background-color: color("shades", "white");
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-color: $collection-border-color;
-  line-height: 50px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  li {
-    display: inline;
-    text-transform: uppercase;
-    font-weight: 700;
-    &.name {
-      padding-left: 20px;
-    }
-    &.location {
-      padding-left: 31%;
-    }
-    &.status {
-      padding-left: 15%;
-    }
-  }
-}
-
-.collection.locations {
-  .title {
-    float: left;
-    width: 35%;
-  }
-  .secondary-content {
-    width: 65%;
-  }
-}
-
-.button-container {
-  float: right;
-  text-align: right;
-  width: 43%;
-}
-.chip.status {
-  float: left;
-  width: 20%;
-}
-.city-state {
-  float: left;
-  width: 34%;
-}
-
-
-// explore if we can correctly use select with liquid fire
-.collection-item {
-  // border: 1px solid red !important;
-  // z-index: 1 !important;
-  // position: relative !important;
-  // overflow: visible !important;
-  .input-field.md-select {
-    // border: 1px solid green !important;
-    // position: relative !important;
-    // z-index: 9999999999999 !important;
-    .select-wrapper  {
-      // border: 1px solid orange !important;
-      // position: relative !important;
-      // z-index: 9999999999999 !important;
-      .dropdown-content {
-        // border: 3px solid blue !important;
-        // position: relative !important;
-        // z-index: 9999999999999 !important;
-      }
-    }
-  }
-}
-
-// kill box shadow for global components until I find the right way to handle
-nav, .btn, .btn-large, .side-nav {
-    box-shadow: none !important;
-}
-.btn, .btn-large {
-  &:hover {
-    transition: box-shadow .25s;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
-  }
-}
-
-
-// website index page needs unique styling for commong website-row template
-.website-index,
-.website-assets,
-.website-themes,
-.website-seos,
-.website-redirects,
-.website-saves {
-  ul, li {
-    list-style-type: none !important;
-  }
-  .website-index-row {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background-color: color("grey", "lighten-1");
-    margin-top: 1px;
-    border-top: 1px solid;
-    border-color: color("grey", "lighten-3");
-    margin-top: -24px;
-    &:before {
-      content: "";
-      display: block;
-      height: 1px;
-      background: color("dark-grey", "lighten-2");
-      margin-top: -2px;
-    }
-    .title {
-      float: left;
-      padding-left: 40px;
-      width: 40%;
-      .corporate {
-        font-weight: 600;
-      }
-      .last-published {
-        font-style: italic;
-      }
-    }
-    .secondary-content {
-      position: absolute;
-      width: 60%;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-    }
-  }
-}
-
-.website-index {
-  .website-index-row {
-    .secondary-content {
-      .edit-button {
-        display: none;
-      }
-    }
-  }
-}
-
-.websites {
-  span.corporate {
-    display: block;
-    font-weight: 600;
-  }
-  .collection .collection-item {
-    padding: 15px 25px;
-    &:nth-child(odd) {
-      background-color: color("light-grey", "base");
-    }
-  }
-}
+// // Default styles
+//
+// body > .ember-view {
+//   display: flex;
+//   min-height: 100vh;
+//   flex-direction: column;
+//   background-color: color("light-grey", "base");
+// }
+//
+// main {
+//   flex: 1 0 auto;
+// }
+//
+// #preview {
+//   display: none;
+// }
+//
+// .website-page {
+//   #preview {
+//     display: block;
+//     flex: 1 0 auto;
+//     iframe {
+//       width: 100%;
+//       height: inherit;
+//       border: none;
+//     }
+//   }
+//   footer {
+//     margin-top: 0;
+//   }
+//   main {
+//     display: none;
+//   }
+// }
+//
+// .liquid-container {
+//   .liquid-child {
+//     padding: 25px;
+//   }
+// }
+// @media #{$very-large-and-up} {
+//   .liquid-container {
+//     .liquid-child {
+//       padding: 25px 0;
+//     }
+//   }
+// }
+//
+// .websites {
+//   header, main, footer {
+//     padding-left: 0;
+//   }
+// }
+//
+// #toast-container {
+//   top: 0;
+//   .toast {
+//     &.success {
+//       background-color: color("green", "base");
+//     }
+//     &.danger {
+//       background-color: color("red", "base");
+//     }
+//   }
+// }
+//
+// /* global form label position adjustment */
+// .input-field label {
+//   left: 0;
+// }
+//
+// .themes .card {
+//   .card-title {
+//     font-size: 18px;
+//   }
+// }
+//
+// .modal-content .collection .collection-item.avatar {
+//   min-height: 35px;
+//   padding-left: 55px;
+//   .circle {
+//     height: 30px;
+//     width: 30px;
+//     left: 10px;
+//     top: 6px;
+//   }
+// }
+//
+// /* let's try some real shit */
+//
+// /* The Parent Pages icon and text need a more defined relationship with each other. A parent container with class */
+// .add-to-parent-action,
+// .remove-from-parent-action {
+//   padding: 10px 0 30px;
+//   display: block;
+//   width: 30px;
+//   height: 30px;
+//   cursor: pointer;
+// }
+//
+// .select-wrapper input.select-dropdown {
+//   border-bottom: 1px solid;
+//   border-bottom-color: color("grey", "lighten-1");
+// }
+//
+// /* How about the widget area? */
+//
+// .add-widgets {
+//   border: 1px solid;
+//   border-color: color("grey", "lighten-2");
+//   -webkit-border-radius: 5px;
+//   -moz-border-radius: 5px;
+//   border-radius: 5px;
+//   background-color: color("shades", "white");
+//   padding: 20px;
+//   margin: 3%;
+// }
+//
+//
+// /* CREATE NEW PAGE button needs unique class */
+//
+// /* modal h4 needs bottom padding to clear form field action */
+//
+// .modal-content {
+//   h4 {
+//     padding-bottom: 10px;
+//   }
+// }
+//
+// // BEGIN CLEAN STYLES
+//
+// // Breadcrumbs
+// .breadcrumb {
+//   font-size: 1rem;
+//   &:before {
+//     margin: 0;
+//     color: color("grey", "darken-2");
+//   }
+//   &:last-child {
+//     color: color("grey", "darken-3");
+//   }
+//   a {
+//     display: inline-block;
+//   }
+// }
+//
+// // Collections
+//
+// .collection-item .liquid-child {
+//   padding: 0;
+// }
+//
+// .locations .collection {
+//   li {
+//     overflow: hidden;
+//   }
+// }
+//
+// .collection-item-container {
+//   position: relative;
+//   -webkit-touch-callout: none; /* iOS Safari */
+//   -webkit-user-select: none;   /* Chrome/Safari/Opera */
+//   -khtml-user-select: none;    /* Konqueror */
+//   -moz-user-select: none;      /* Firefox */
+//   -ms-user-select: none;       /* Internet Explorer/Edge */
+//   user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+//
+//   .widget-controls {
+//     height: 30px;
+//     width: 85px;
+//     position: absolute;
+//     top: 5px;
+//     right: 5px;
+//   }
+//   span i {
+//     font-size: 22px;
+//     cursor: pointer;
+//   }
+//   .add {
+//     color: color("green", "base");
+//   }
+//   .remove {
+//     color: color("red", "base");
+//   }
+//   .count {
+//     width: 30px;
+//     display: inline-block;
+//     text-align: center;
+//     font-size: 22px;
+//   }
+// }
+//
+// .redirects .collection {
+//   .secondary-content {
+//     float: none;
+//   }
+//   textarea {
+//     padding: 0;
+//     margin: 0;
+//   }
+// }
+//
+// .pages.collection {
+//   margin: 0 0 1rem 0;
+//   border: 1px solid $collection-border-color;
+//   border-radius: 2px;
+//   overflow: hidden;
+//   position: relative;
+//   display: block;
+//   .collection-item {
+//     background-color: color("shades", "white");
+//     line-height: 2rem;
+//     padding: 0;
+//     border: none;
+//     margin: 0;
+//     position: relative;
+//     display: block;
+//     transition: all .13s;
+//     &:last-child {
+//       border-bottom: none;
+//     }
+//     &.is-dragging {
+//       z-index: 10;
+//       border-top: 1px solid;
+//       border-color: color("grey", "lighten-2");
+//       opacity: 0.8;
+//     }
+//     &.panel-active {
+//       background-color: transparent;
+//       div.name {
+//         font-weight: 600;
+//         border-bottom: 0;
+//       }
+//     }
+//     div {
+//       &.grabber, .widget-grabber, &.no-grab {
+//         float: left;
+//         i {
+//           padding: 14px;
+//         }
+//       }
+//       &.grabber, .widget-grabber {
+//         cursor: row-resize;
+//       }
+//       &.name {
+//         padding: 10px 20px;
+//         border-bottom: 1px solid;
+//         border-color: color("grey", "lighten-2");
+//         i {
+//           font-size: 1.2em;
+//         }
+//       }
+//     }
+//     .settings-action {
+//       i {
+//         color: color("dark-grey", "base");
+//       }
+//       &:hover {
+//         cursor: pointer;
+//       }
+//     }
+//     .btn i {
+//       color: color("shades", "white");
+//     }
+//     .add-widget-action i {
+//       color: color("shades", "white");
+//       &:hover {
+//         color: color("shades", "white");
+//       }
+//     }
+//   }
+//   li.disabled {
+//     background-color: color("grey", "lighten-3");
+//   }
+//   .sub-group {
+//     border-bottom: none;
+//     background-color: color("grey", "lighten-4");
+//     // overflow: hidden;
+//   }
+//   .sub-item {
+//     margin-left: 42px;
+//     background-color: color("shades", "white");
+//     &.is-dragging {
+//       position: relative;
+//       border-top: 1px solid;
+//       border-color: color("grey", "lighten-2");
+//     }
+//   }
+//   .secondary-content {
+//     float: right;
+//     margin-left: 5px;
+//   }
+//   .controls {
+//     border-bottom: 1px solid;
+//     border-color: color("grey", "lighten-2");
+//     padding: 30px 20px;
+//     background-color: color("grey", "lighten-4");
+//     margin-bottom: 0;
+//     .nav-pages-left {
+//       padding-top: 14px;
+//     }
+//   }
+// }
+//
+// // dial in collection styles
+// .collection {
+//   margin: 0;
+//
+//   &.widget-group {
+//     background-color: color("shades", "white");
+//   }
+//
+//   &.with-header {
+//     border-radius: 6px;
+//     .collection-header {
+//       background-color: color("dark-grey", "base");
+//       border-radius: 6px 6px 0 0;
+//       .title {
+//         color: color("shades", "white");
+//         text-transform: uppercase;
+//         font-size: 18px;
+//         font-weight: 600;
+//       }
+//     }
+//   }
+// }
+//
+// // widget name editing - maybe too general
+// .name .title:hover {
+//   cursor: pointer;
+// }
+//
+// .container-header {
+//   padding: 6px 20px;
+//   background-color: color("dark-grey", "base");
+//   border-radius: 6px 6px 0 0;
+//   border-bottom: 1px solid;
+//   border-color: color("grey", "base");
+//   .title {
+//     color: color("shades", "white");
+//     text-transform: uppercase;
+//     font-size: 18px;
+//     font-weight: 600;
+//     text-align: center;
+//   }
+// }
+//
+// // assets page styles
+//
+// .asset-thumbnail {
+//   width: 100%;
+//   max-width: 150px;
+//   display: inline-block;
+// }
+//
+// .asset-url {
+//   margin-left: 50px;
+//   max-width: 50%;
+//   background-color: color("grey", "lighten-3");
+//   font-size: 0.8em;
+//   display: inline-block;
+//   vertical-align: top;
+//   padding: 20px;
+// }
+//
+//
+// // SKETCHY - verify
+//
+// #index-banner {
+//   background-color: color("dark-grey", "lighten-2") !important;
+// }
+//
+//
+//
+// // was this a new add?
+//
+// .controls .sortable-item {
+//   border-top: 1px solid;
+//   border-color: color("grey", "lighten-2");
+//   &.is-dragging {
+//     position: relative;
+//     z-index: 1;
+//   }
+// }
+//
+// /* global form label position adjustment */
+// .input-field label {
+//   left: 0;
+// }
+//
+// .themes .card {
+//   .card-title {
+//     font-size: 18px;
+//   }
+// }
+//
+// @media #{$mega-large-and-down} {
+//   .website {
+//     main, footer, #preview {
+//       padding-left: 266px;
+//     }
+//   }
+//   .websites {
+//     header, main, footer, #preview {
+//       padding-left: 0;
+//     }
+//   }
+// }
+// .website {
+//   header {
+//     padding-left: 266px;
+//   }
+// }
+//
+// .seos {
+//   .seo-editor {
+//     padding: 0 20px;
+//   }
+//   table.save-files {
+//     width: 98%;
+//     padding: 0 1%;
+//     margin: 0 auto;
+//   }
+// }
+//
+// // let's figure out how to cleanly align disparate elements
+// .display-inline {
+//   display: inline;
+// }
+//
+// .page-status-element {
+//   .switch {
+//     padding-left: 20px;
+//   }
+// }
+//
+// .top-padding {
+//   padding-top: 1em !important;
+// }
+//
+// // sigh... now widget edit is also in secondary column but using wormhole (so same as navigation pages)
+// .website-page {
+//   .side-nav-secondary {
+//     .active {
+//       background-color: color("grey", "base");
+//       padding: 16px;
+//     }
+//     h6.widget-heading {
+//       padding: 10px 7px;
+//       font-weight: 600;
+//     }
+//     &.side-nav {
+//       a.btn {
+//         color: color("shades", "white");
+//       }
+//     }
+//     .collapsible-body {
+//       margin: 10px;
+//       padding: 10px 0;
+//        p {
+//         padding: 0;
+//         margin: 0;
+//       }
+//     }
+//     .collection {
+//       .sortable-item {
+//         padding: 0 7px;
+//         .widget-grabber,
+//         .name {
+//           display: inline;
+//         }
+//         .secondary-content {
+//           padding-left: 5px;
+//           &:hover {
+//             cursor: pointer;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// // Hide the submit button on widget edit panel form in favor
+// // of the one we render with ember
+// form.edit_widget input.save-btn {
+//   display:none;
+// }
+//
+// // Footer
+// footer.page-footer {
+//   height: 64px;
+//   padding-top: 0;
+// }
+//
+//
+// // style the secondary nav
+// // #side-nav-secondary ul.side-nav-secondary.activated
+//
+// .side-nav-secondary {
+//   background-color: color("dark-grey", "lighten-2");
+// }
+//
+// // Locations sort row
+// .sort-locations {
+//   background-color: color("grey", "lighten-1");
+//   height: 55px;
+//   .select-wrapper {
+//     margin: -16px 0 0 20px;
+//     max-width: 340px;
+//     padding-top: 4px;
+//   }
+//   input,.select-dropdown {
+//
+//   }
+// }
+//
+// // locations page styles
+// .locations-headings {
+//   background-color: color("shades", "white");
+//   border-left: 1px solid;
+//   border-right: 1px solid;
+//   border-color: $collection-border-color;
+//   line-height: 50px;
+//   height: 100%;
+//   margin: 0;
+//   padding: 0;
+//   li {
+//     display: inline;
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     &.name {
+//       padding-left: 20px;
+//     }
+//     &.location {
+//       padding-left: 31%;
+//     }
+//     &.status {
+//       padding-left: 15%;
+//     }
+//   }
+// }
+//
+// .collection.locations {
+//   .title {
+//     float: left;
+//     width: 35%;
+//   }
+//   .secondary-content {
+//     width: 65%;
+//   }
+// }
+//
+// .button-container {
+//   float: right;
+//   text-align: right;
+//   width: 43%;
+// }
+// .chip.status {
+//   float: left;
+//   width: 20%;
+// }
+// .city-state {
+//   float: left;
+//   width: 34%;
+// }
+//
+//
+// // explore if we can correctly use select with liquid fire
+// .collection-item {
+//   // border: 1px solid red !important;
+//   // z-index: 1 !important;
+//   // position: relative !important;
+//   // overflow: visible !important;
+//   .input-field.md-select {
+//     // border: 1px solid green !important;
+//     // position: relative !important;
+//     // z-index: 9999999999999 !important;
+//     .select-wrapper  {
+//       // border: 1px solid orange !important;
+//       // position: relative !important;
+//       // z-index: 9999999999999 !important;
+//       .dropdown-content {
+//         // border: 3px solid blue !important;
+//         // position: relative !important;
+//         // z-index: 9999999999999 !important;
+//       }
+//     }
+//   }
+// }
+//
+// // kill box shadow for global components until I find the right way to handle
+// nav, .btn, .btn-large, .side-nav {
+//     box-shadow: none !important;
+// }
+// .btn, .btn-large {
+//   &:hover {
+//     transition: box-shadow .25s;
+//     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
+//   }
+// }
+//
+//
+// // website index page needs unique styling for commong website-row template
+// .website-index,
+// .website-assets,
+// .website-themes,
+// .website-seos,
+// .website-redirects,
+// .website-saves {
+//   ul, li {
+//     list-style-type: none !important;
+//   }
+//   .website-index-row {
+//     position: relative;
+//     width: 100%;
+//     height: 100px;
+//     background-color: color("grey", "lighten-1");
+//     margin-top: 1px;
+//     border-top: 1px solid;
+//     border-color: color("grey", "lighten-3");
+//     margin-top: -24px;
+//     &:before {
+//       content: "";
+//       display: block;
+//       height: 1px;
+//       background: color("dark-grey", "lighten-2");
+//       margin-top: -2px;
+//     }
+//     .title {
+//       float: left;
+//       padding-left: 40px;
+//       width: 40%;
+//       .corporate {
+//         font-weight: 600;
+//       }
+//       .last-published {
+//         font-style: italic;
+//       }
+//     }
+//     .secondary-content {
+//       position: absolute;
+//       width: 60%;
+//       top: 50%;
+//       right: 20px;
+//       transform: translateY(-50%);
+//     }
+//   }
+// }
+//
+// .website-index {
+//   .website-index-row {
+//     .secondary-content {
+//       .edit-button {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+//
+// .websites {
+//   span.corporate {
+//     display: block;
+//     font-weight: 600;
+//   }
+//   .internal-name {
+//     font-weight: 600;
+//     span {
+//       font-weight: normal;
+//     }
+//   }
+//   .collection .collection-item {
+//     padding: 15px 25px;
+//     &:nth-child(odd) {
+//       background-color: color("light-grey", "base");
+//     }
+//     &:nth-child(1) {
+//       background-color: color("light-blue", "lighten-5");
+//     }
+//   }
+// }

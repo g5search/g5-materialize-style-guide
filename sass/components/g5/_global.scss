@@ -319,7 +319,7 @@ main {
         color: color("shades", "white");
         text-transform: uppercase;
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 600;
       }
     }
   }
@@ -340,7 +340,7 @@ main {
     color: color("shades", "white");
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
   }
 }
@@ -527,7 +527,7 @@ footer.page-footer {
   li {
     display: inline;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     &.name {
       padding-left: 20px;
     }
@@ -589,9 +589,16 @@ footer.page-footer {
 }
 
 // kill box shadow for global components until I find the right way to handle
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .dropdown-content, .collapsible, .side-nav, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-large, .dropdown-content, .collapsible, .side-nav {
+nav, .btn, .btn-large, .side-nav {
     box-shadow: none !important;
 }
+.btn, .btn-large {
+  &:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
 
 // website index page needs unique styling for commong website-row template
 .website-index,
@@ -654,5 +661,11 @@ footer.page-footer {
   span.corporate {
     display: block;
     font-weight: 600;
+  }
+  .collection .collection-item {
+    padding: 15px 25px;
+    &:nth-child(odd) {
+      background-color: color("light-grey", "base");
+    }
   }
 }

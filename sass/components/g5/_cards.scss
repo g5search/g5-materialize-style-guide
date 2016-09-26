@@ -1,0 +1,15 @@
+.card-image.pending {
+  &:after {
+    content: "PENDING";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(color("dark-grey", "base"), .5);
+    color: color("shades", "white");
+    font-size: 3em;
+    text-align: center;
+    line-height: 4em;
+  }
+}

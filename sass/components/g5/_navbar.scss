@@ -5,4 +5,9 @@
     position: relative;
     background-color: color("grey", "lighten-1");
   }
+
+  .version {
+    float: right;
+    padding-right: calc(100% - 94%);
+  }
 }

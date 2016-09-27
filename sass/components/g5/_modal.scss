@@ -1,6 +1,12 @@
 .modal {
   // background: linear-gradient(to bottom, #2a2a2a 0,#2a2a2a 60px,#000000 60px,white 61px,white 100%);
 
+  h1 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin: 2em, 0;
+  }
+
   h4 {
     font-size: 1.2em;
     color: white;
@@ -28,5 +34,23 @@
 
   .collection {
     margin-top: 50px;
+  }
+
+  // deal with horizontal scrollbar on modal beneath tabs
+  .tabs {
+    overflow-x: hidden;
+  }
+
+  .form-field-row .form-field:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .row .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .btn {
+    display: none;
   }
 }

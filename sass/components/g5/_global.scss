@@ -635,18 +635,6 @@ nav, .btn, .btn-large, .side-nav {
   .website-index-row {
     position: relative;
     width: 100%;
-    background-color: color("grey", "lighten-1");
-    margin-top: 1px;
-    border-top: 1px solid;
-    border-color: color("grey", "lighten-3");
-    margin-top: -24px;
-    &:before {
-      content: "";
-      display: block;
-      height: 1px;
-      background: color("dark-grey", "lighten-2");
-      margin-top: -2px;
-    }
     .title {
       float: left;
       padding: 10px 0 0 40px;
@@ -668,22 +656,26 @@ nav, .btn, .btn-large, .side-nav {
     .collapsible {
       border: 0;
       box-shadow: none !important;
+      margin: 0;
     }
     .collapsible-header {
       position: absolute;
-      bottom: -24px;
-      right: 0;
-      background-color: transparent;
+      bottom: 0;
+      right: 25px;
       border: 0;
-      min-height: 1em;
-      line-height: 1em;
+      min-height: 2em;
+      line-height: 2em;
       font-size: 0.8em;
+      color: color("shades", "black");
       text-transform: uppercase;
-      padding: 0;
+      padding: 0 1em;
+      background-color: color("grey", "lighten-1");
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
       i {
-        font-size: 0.8em;
-        line-height: 1em;
-        float: left;
+        font-size: 1em;
+        line-height: 2em;
+        float: right;
         margin-right: 0;
       }
       &:after {
@@ -700,15 +692,25 @@ nav, .btn, .btn-large, .side-nav {
       border: 0;
       background: 0;
       height: 100%;
-      min-height: 50px;
+      background-color: color("grey", "lighten-1");
+      margin-top: 1px;
+      border-top: 1px solid;
+      border-color: color("grey", "lighten-3");
+      margin-top: -24px;
+      &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        background: color("dark-grey", "lighten-2");
+        margin-top: -2px;
+      }
       p {
         padding: 0;
       }
     }
     li.active {
       .collapsible-header {
-        bottom: 10px;
-        right: 25px;
+        bottom: 4px;
       }
       .collapsible-body {
         min-height: 100px;

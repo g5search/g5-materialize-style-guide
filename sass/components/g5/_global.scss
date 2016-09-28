@@ -204,7 +204,7 @@ main {
   margin: 0 0 1rem 0;
   border: 1px solid $collection-border-color;
   border-radius: 2px;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   display: block;
   .collection-item {
@@ -589,7 +589,7 @@ footer.page-footer {
 }
 
 // kill box shadow for global components until I find the right way to handle
-nav, .btn, .btn-large, .side-nav {
+nav, .btn, .btn-large, .side-nav, .collection {
     box-shadow: none !important;
 }
 .btn, .btn-large {

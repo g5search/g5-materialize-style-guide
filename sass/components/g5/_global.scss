@@ -599,64 +599,6 @@ nav, .btn, .btn-large, .side-nav {
   }
 }
 
-
-// website index page needs unique styling for commong website-row template
-.website-index,
-.website-assets,
-.website-themes,
-.website-seos,
-.website-redirects,
-.website-saves {
-  ul, li {
-    list-style-type: none !important;
-  }
-  .website-index-row {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background-color: color("grey", "lighten-1");
-    margin-top: 1px;
-    border-top: 1px solid;
-    border-color: color("grey", "lighten-3");
-    margin-top: -24px;
-    &:before {
-      content: "";
-      display: block;
-      height: 1px;
-      background: color("dark-grey", "lighten-2");
-      margin-top: -2px;
-    }
-    .title {
-      float: left;
-      padding-left: 40px;
-      width: 40%;
-      .corporate {
-        font-weight: 600;
-      }
-      .last-published {
-        font-style: italic;
-      }
-    }
-    .secondary-content {
-      position: absolute;
-      width: 60%;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-    }
-  }
-}
-
-.website-index {
-  .website-index-row {
-    .secondary-content {
-      .edit-button {
-        display: none;
-      }
-    }
-  }
-}
-
 .websites {
   span.corporate {
     display: block;
@@ -679,13 +621,108 @@ nav, .btn, .btn-large, .side-nav {
   }
 }
 
-// we will show or hide location info header
-.location-info-block {
-  span.hide,
-  span.show {
-    display: block;
-    background-color: red;
-    padding: 1em;
-    width: 200px;
+// website index page needs unique styling for commong website-row template
+// we will show or hide location info header using accordion
+.website-index,
+.website-assets,
+.website-themes,
+.website-seos,
+.website-redirects,
+.website-saves {
+  ul, li {
+    list-style-type: none !important;
+  }
+  .website-index-row {
+    position: relative;
+    width: 100%;
+    background-color: color("grey", "lighten-1");
+    margin-top: 1px;
+    border-top: 1px solid;
+    border-color: color("grey", "lighten-3");
+    margin-top: -24px;
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      background: color("dark-grey", "lighten-2");
+      margin-top: -2px;
+    }
+    .title {
+      float: left;
+      padding: 10px 0 0 40px;
+      width: 40%;
+      .corporate {
+        font-weight: 600;
+      }
+      .last-published {
+        font-style: italic;
+      }
+    }
+    .secondary-content {
+      position: absolute;
+      width: 60%;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+    .collapsible {
+      border: 0;
+      box-shadow: none !important;
+    }
+    .collapsible-header {
+      position: absolute;
+      bottom: -24px;
+      right: 0;
+      background-color: transparent;
+      border: 0;
+      min-height: 1em;
+      line-height: 1em;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      padding: 0;
+      i {
+        font-size: 0.8em;
+        line-height: 1em;
+        float: left;
+        margin-right: 0;
+      }
+      &:after {
+        content: "Show Location Info";
+      }
+      &.active {
+        &:after {
+          content: "Hide Location Info";
+        }
+      }
+    }
+
+    .collapsible-body {
+      border: 0;
+      background: 0;
+      height: 100%;
+      min-height: 50px;
+      p {
+        padding: 0;
+      }
+    }
+    li.active {
+      .collapsible-header {
+        bottom: 10px;
+        right: 25px;
+      }
+      .collapsible-body {
+        min-height: 100px;
+      }
+    }
+  }
+}
+
+.website-index {
+  .website-index-row {
+    .secondary-content {
+      .edit-button {
+        display: none;
+      }
+    }
   }
 }

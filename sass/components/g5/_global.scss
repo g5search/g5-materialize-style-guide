@@ -732,3 +732,13 @@ nav, .btn, .btn-large, .side-nav, .collection {
     }
   }
 }
+
+// current theme text is huge
+.website-themes {
+  h2 {
+    font-size: 1.4em;
+    span {
+      font-size: 1.6em;
+    }
+  }
+}

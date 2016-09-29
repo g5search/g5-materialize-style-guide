@@ -228,8 +228,10 @@ main {
     &.panel-active {
       background-color: transparent;
       div.name {
-        font-weight: 600;
         border-bottom: 0;
+        .name-text {
+          font-weight: 600;
+        }
       }
     }
     div {
@@ -689,6 +691,7 @@ nav, .btn, .btn-large, .side-nav, .collection {
     }
 
     .collapsible-body {
+      display: none !important;
       border: 0;
       background: 0;
       height: 100%;
@@ -713,6 +716,7 @@ nav, .btn, .btn-large, .side-nav, .collection {
         bottom: 4px;
       }
       .collapsible-body {
+        display: block !important;
         min-height: 100px;
       }
     }

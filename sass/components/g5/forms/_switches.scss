@@ -1,12 +1,37 @@
 /* Switch
    ========================================================================== */
 
+// .switch label input[type=checkbox] {
+//
+//   &:checked + .lever {
+//
+//     &:after {
+//       left: 24px;
+//     }
+//   }
+// }
+//
+// .switch label {
+//   font-size: 1em;
+//   text-transform: uppercase;
+// }
+// .switch label .lever {
+//   width: 44px;
+//   margin: 0 5px;
+//
+//   &:after {
+//     border-radius: $switch-radius;
+//   }
+// }
+
+
+
 .switch label input[type=checkbox] {
 
   &:checked + .lever {
 
     &:after {
-      left: 24px;
+      left: 44px;
     }
   }
 }
@@ -14,12 +39,32 @@
 .switch label {
   font-size: 1em;
   text-transform: uppercase;
+  .onlabel,
+  .offlabel {
+    display: none;
+  }
 }
 .switch label .lever {
-  width: 44px;
+  width: 88px;
+  height: 30px;
   margin: 0 5px;
 
   &:after {
+    content: "ON";
+    width: 24px;
+    height: 30px;
     border-radius: $switch-radius;
+    box-shadow: none;
+    left: 0;
+    top: 0;
+  }
+}
+
+.switch {
+  [type="checkbox"]:not(:checked) {
+    // background: red !important;
+  }
+  [type="checkbox"]:checked {
+
   }
 }

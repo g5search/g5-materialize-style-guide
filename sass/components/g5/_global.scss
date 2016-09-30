@@ -743,6 +743,7 @@ footer.page-footer {
   }
   h5 {
     font-size: 1.2em;
+    padding-top: 10px;
   }
 
   .custom-colors {
@@ -759,5 +760,8 @@ footer.page-footer {
     .col {
       padding: 0;
     }
+  }
+  .color-picker {
+    padding-top: 20px !important;
   }
 }

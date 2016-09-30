@@ -31,7 +31,8 @@
   &:checked + .lever {
 
     &:after {
-      left: 44px;
+      left: 34px;
+      content: "ON";
     }
   }
 }
@@ -47,24 +48,17 @@
 .switch label .lever {
   width: 88px;
   height: 30px;
-  margin: 0 5px;
 
   &:after {
-    content: "ON";
-    width: 24px;
+    content: "OFF";
+    color: color("shades", "white");
+    width: 54px;
     height: 30px;
+    line-height: 30px;
     border-radius: $switch-radius;
     box-shadow: none;
     left: 0;
     top: 0;
-  }
-}
-
-.switch {
-  [type="checkbox"]:not(:checked) {
-    // background: red !important;
-  }
-  [type="checkbox"]:checked {
-
+    text-align: center;
   }
 }

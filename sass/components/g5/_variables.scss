@@ -58,7 +58,7 @@ $switch-bg-color: $secondary-color !default;
 $switch-checked-lever-bg: $primary-color !default;
 $switch-unchecked-bg: $secondary-color !default;
 $switch-unchecked-lever-bg: color("grey", "lighten-2") !default;
-$switch-radius: 0 !default;
+$switch-radius: 4px !default;
 
 /* 11. Global
    ========================================================================== */
@@ -101,4 +101,3 @@ $footer-bg-color: color("dark-grey", "base") !default;
 
 $collection-border-color: #c4c2c2 !default;
 // $collection-bg-color: color("dark-grey", "base") !default;
-

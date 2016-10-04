@@ -225,7 +225,8 @@ main {
       border-color: color("grey", "lighten-2");
       opacity: 0.8;
     }
-    &.panel-active {
+    &.panel-active,
+    li.panel-active {
       background-color: transparent;
       div.name {
         border-bottom: 0;

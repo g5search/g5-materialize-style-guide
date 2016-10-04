@@ -451,6 +451,13 @@ main {
       padding: 10px 7px;
       font-weight: 600;
     }
+    .close-nav {
+      text-align: right;
+      font-size: 1.4em;
+      color: $sidenav-font-color;
+      padding-right: 20px;
+      margin: 0.75em 0;
+    }
     &.side-nav {
       a.btn {
         color: color("shades", "white");

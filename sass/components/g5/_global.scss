@@ -695,6 +695,11 @@ footer.page-footer {
         &:after {
           content: "Hide Location Info";
         }
+        i {
+          -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
       }
     }
 

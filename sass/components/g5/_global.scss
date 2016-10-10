@@ -514,6 +514,10 @@ main {
     &.side-nav {
       a.btn {
         color: color("shades", "white");
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 0.9em;
+        margin-left: 10px;
       }
     }
     .collapsible-body {

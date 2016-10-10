@@ -278,7 +278,6 @@ main {
   .sub-group {
     border-bottom: none;
     background-color: color("grey", "lighten-4");
-    // overflow: hidden;
   }
   .sub-item {
     margin-left: 42px;
@@ -442,8 +441,61 @@ main {
 }
 
 // sigh... now widget edit is also in secondary column but using wormhole (so same as navigation pages)
-.website-page {
-  .side-nav-secondary {
+#side-nav{
+  ul {
+    transition: width 0.3s ease;
+  }
+  span {
+    transition: visibility 0s, opacity 0.3s linear;
+    transition-delay: 0.2s;
+    visibility: visible;
+    opacity: 1;
+  }
+  &.secondary-open {
+    ul {
+      width: 50px !important;
+      overflow-x: hidden;
+    }
+    li {
+      max-width: 50px;
+      &.for-edit-page {
+        background-color: #87D7FC;
+        i {
+          color: #ffffff;
+        }
+      }
+    }
+    span {
+      transition: visibility 0s, opacity 0s linear;
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+    }
+    li.heading {
+      opacity: 0;
+    }
+  }
+}
+
+.secondary-active {
+  &+header {
+    /* when secondary nav is active we need to adjust breadcrumbs etc. */
+    transition: padding 0.3s ease;
+    padding-left: 316px;
+  }
+}
+
+#side-nav-secondary {
+  &.secondary-open {
+    ul {
+      left: 50px;
+      opacity: 1;
+    }
+  }
+  ul {
+    transition: opacity 0.3s ease;
+    opacity: 0.1;
+    left: -300px;
     .active {
       background-color: color("grey", "base");
       padding: 16px;
@@ -467,7 +519,7 @@ main {
     .collapsible-body {
       margin: 10px;
       padding: 10px 0;
-       p {
+      p {
         padding: 0;
         margin: 0;
       }
@@ -631,7 +683,7 @@ footer.page-footer {
   }
 }
 
-// website index page needs unique styling for commong website-row template
+// website index page needs unique styling for common website-row template
 // we will show or hide location info header using accordion
 .website-index,
 .website-assets,

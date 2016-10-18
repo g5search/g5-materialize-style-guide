@@ -1,6 +1,6 @@
 // Default styles
 
-$reorder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4OTk3QzNGRDg4QkQxMUU2OEQ1MUFENUFBNENERkFBNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4OTk3QzNGRTg4QkQxMUU2OEQ1MUFENUFBNENERkFBNCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjg5OTdDM0ZCODhCRDExRTY4RDUxQUQ1QUE0Q0RGQUE0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjg5OTdDM0ZDODhCRDExRTY4RDUxQUQ1QUE0Q0RGQUE0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+BFeWhQAAATBJREFUeNrElKtOA0EUhmdvXQg0La4gMEgcqUIjK3kU3gKBq8GQKgivwMWSYABHQioQYBFFkJQZvtPMJmdhtukQEv7ky9z/OTM7ZxOD0jQ1WtK21hrn3ChJkg3KPTDUa/Okr75SDTB5CH2aS5SnZp5kR0UJZ/CW53lHdqV+T3kBXWlX1KQGduEBtsTQ94nRHe39aqMfBkpFU6CwbP5aEkcbMpj69iJykMOnLBjDJkx8mIvIwio8i8sxrPjFLiJyMXk3/y4J5UAdIUazI4jBC6zDR+QllvAqBh3/SaaRETSv8e8/mC/fn3AoZHmuRWWiE4eyzLKsZpIGkmkHHunaVhPbpPgNDOQ/EcxGpRaDJ+xkoecn38IVY2sxl3SIwRPHuKR+/ovPPDvWEQbX8+Z8CTAAgyJBD4GVHMAAAAAASUVORK5CYII=";
+$reorder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAPCAYAAADQ4S5JAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpERDQ3MTA1QzhBNzkxMUU2QkJCMEFCMTJCMUI1NEU2NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpERDQ3MTA1RDhBNzkxMUU2QkJCMEFCMTJCMUI1NEU2NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEwMzQ0Qjg5OEE3NDExRTZCQkIwQUIxMkIxQjU0RTY1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEwMzQ0QjhBOEE3NDExRTZCQkIwQUIxMkIxQjU0RTY1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+i7RdqQAAANlJREFUeNqkkk0KwkAMRmc6ICJSxL+FC9cuvINnsd5AFE9UEFeCuHHlwpMIiiiCC0ERtL7ItJRSGdDAIynJl8k0oxXmeZ6KTWutoihaEPrQI05yEuuMwEcQ4k8kL/gOPsAfYkHS1dKHlTHm04R4hp/YWOVZJZ2wcV39Y9JiDm24ynW+1L2gDFsRjKAJD0fzAhx/GmkINXg6ag2cRbCEFtwddyjC3j3Cl/8fW0OWFC9KYInV9NPJbjqgYCObtt8hxeP0prPnlWzRjXezgy4MnLMjmiJa5+XeAgwARII3EroUTjgAAAAASUVORK5CYII=";
 
 body > .ember-view {
   display: flex;
@@ -152,6 +152,10 @@ main {
   padding: 0;
 }
 
+ul.locations {
+  margin-bottom: 20px;
+}
+
 .locations .collection {
   li {
     overflow: hidden;
@@ -211,7 +215,7 @@ main {
   display: block;
   .collection-item {
     background-color: color("shades", "white");
-    line-height: 2rem;
+    line-height: 2.2rem;  // dictated by change of button height to 36px
     padding: 0;
     border: none;
     margin: 0;
@@ -465,7 +469,7 @@ main {
     li {
       max-width: 50px;
       &.for-edit-page {
-        background-color: #87D7FC;
+        background-color: #87d7fc;
         i {
           color: #ffffff;
         }
@@ -574,7 +578,7 @@ footer.page-footer {
 }
 
 // Locations sort row
-.sort-locations {
+.container-header-secondary {
   background-color: color("grey", "lighten-1");
   height: 55px;
   .select-wrapper {
@@ -584,6 +588,9 @@ footer.page-footer {
   }
   input,.select-dropdown {
 
+  }
+  &.nav{
+    padding: 12px;
   }
 }
 
@@ -840,4 +847,13 @@ footer.page-footer {
   .color-picker {
     padding-top: 20px !important;
   }
+}
+
+.locations-table.deleted {
+  display:none;
+}
+
+body.g5-user .locations-table.deleted {
+  display:block;
+  margin-top: 20px;
 }

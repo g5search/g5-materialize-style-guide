@@ -11,7 +11,6 @@ $chevron-down: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu
     -moz-border-radius: 5px;
     border-radius: 5px;
     text-indent: 15px;
-    // background-color: color("shades", "white");
     background-color: transparent;
     background: color("shades", "white") url($chevron-down) 96% center no-repeat;
   }
@@ -19,16 +18,7 @@ $chevron-down: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu
   span.caret {
     color: transparent;
   }
-  span.caret:after {
-    // content: "\f078";
-    // font-family: FontAwesome;
-    // font-size: 18px;
-    // color: color("grey", "base");
-    // position: absolute;
-    // right: 15px;
-    // top: -5px;
-    // z-index: 1;
-  }
+  span.caret:after {}
 
   & + label {
     top: -20px;
@@ -40,5 +30,42 @@ $chevron-down: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAMCAYAAABvEu
   }
   span.caret.disabled:after {
     color: rgba(0,0,0,.3);
+  }
+}
+
+.modal  {
+  .select-row-layout {
+    .select-wrapper {
+      margin-left: 10px;
+      max-width: 47%;
+    }
+  }
+
+  .note {
+    margin-left: 10px;
+  }
+
+  .form-field.draggable-widget {
+    margin-left: 0;
+
+    .form-field-wrapper {
+      border-color: color("grey", "lighten-1");
+
+      label {
+        font-size: 1em;
+        padding: 0 .75em;
+        line-height: 2em;
+      }
+
+      .edit-widget small {
+        font-size: 1em !important;
+        text-transform: lowercase;
+      }
+
+      .select-wrapper {
+        width: 98%;
+        margin-left: 1%;
+      }
+    }
   }
 }

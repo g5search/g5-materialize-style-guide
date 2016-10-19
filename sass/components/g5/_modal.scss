@@ -1,5 +1,6 @@
 .modal {
 
+
   h1 {
     font-size: 1.4em;
     line-height: 1.4em;
@@ -44,8 +45,12 @@
     overflow-x: hidden;
   }
 
-  .form-field-row .form-field:nth-child(even) {
-    margin-left: 0;
+  .form-field-row {
+    margin: 2em 0;
+
+    .form-field:nth-child(even) {
+      margin-left: 0;
+    }
   }
 
   .row .col {
@@ -68,4 +73,45 @@
   input {
     background-color: color("shades", "white");
   }
+
+  .form-field-row-css-custom {
+    margin-top: -10px !important;
+    label {
+      font-size: 1em;
+    }
+  }
+
+  fieldset {
+    margin-bottom: 1em;
+  }
+
+}
+
+
+.modal {
+
+  .form-field-row-css-custom,
+  .form-field-disabled,
+  .form-field-row-bg-color,
+  .form-field-row-bg-color,
+  .form-field-row-bg-image,
+  .form-field-row-bg-behavior,
+  .form-field-row-bg-overlay-color,
+  .form-field-row-bg-overlay-opacity,
+  .form-field-row-text-color,
+  .form-field-row-bg-position,
+  .form-field-row-divider-image,
+  .form-field-row-divider-position {
+    display: block !important;
+    position: relative !important;
+    width: 49% !important;
+    float: left !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-field-disabled,
+  .form-field-row-layout {
+    margin-bottom: 0 !important;
+  }
+
 }

@@ -8,10 +8,10 @@
 
 .tabs {
   background-color: $tabs-bg-color;
+  margin-bottom: 20px;
 
   .tab {
     a {
-      // background: linear-gradient(to top, color("grey", "darken-2") 0%,color("grey", "darken-2") 5px,#000000 5px,color("shades", "white") 5px,color("shades", "white") 100%);
       background: linear-gradient(to top, color("grey", "darken-2") 0%,color("grey", "darken-2") 5px,#000000 5px,transparent 5px,transparent 100%);
       color: $tabs-text-color;
       i {
@@ -19,7 +19,6 @@
       }
       &.active {
         background: transparent;
-        background-color: color("shades", "white");
         color: $primary-color;
       }
     }
@@ -29,17 +28,5 @@
     height: 5px;
     margin-left: -11px;
     margin-right: -11px;
-    // display: none;
-  }
-}
-
-.modal {
-  .tabs {
-    margin-bottom: 20px;
-    
-    // li.tab a.active ~ div.indicator {
-    .indicator {
-      margin: 0;
-    }
   }
 }

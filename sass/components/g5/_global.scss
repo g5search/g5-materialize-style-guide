@@ -602,8 +602,9 @@ footer.page-footer {
   background-color: color("dark-grey", "lighten-2");
 }
 
-// Locations sort row
-.container-header-secondary {
+// Locations sort row - the class changed to 'container-header-secondary' doesn't exist
+.container-header-secondary,
+.sort-locations  {
   background-color: color("grey", "lighten-1");
   height: 55px;
   .select-wrapper {

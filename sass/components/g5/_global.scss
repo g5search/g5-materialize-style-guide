@@ -2,7 +2,7 @@ $reorder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAPCAYAAADQ4S5JAAA
 
 body > .ember-view {
   display: flex;
-  min-height: 100vh;
+  // min-height: 100vh;
   flex-direction: column;
   background-color: color("light-grey", "base");
 }
@@ -298,7 +298,7 @@ ul.locations {
   }
   .secondary-content {
     float: right;
-    margin-left: 15px;
+    margin-left: 5px;
   }
   .controls {
     border-bottom: 1px solid;
@@ -386,6 +386,12 @@ ul.locations {
   display: inline-block;
   vertical-align: top;
   padding: 20px;
+  @media #{$large-and-down} {
+      max-width: 30%;
+  }
+  @media #{$large-only} {
+      max-width: 40%;
+  }
 }
 
 
@@ -427,9 +433,17 @@ ul.locations {
     }
   }
 }
+
+// there is an indesputable request to make header 100% wide so as to disassociate from individual pages
 .website {
   header {
-    padding-left: 266px;
+    // padding-left: 266px;
+    position: fixed;
+    width: 100%;
+    height: 66px;
+  }
+  main, #preview {
+    padding-top: 66px;
   }
 }
 
@@ -497,7 +511,6 @@ ul.locations {
 }
 
 .secondary-active {
-  &+header,
   &+header+main+#preview {
     /* when secondary nav is active we need to adjust breadcrumbs etc. */
     transition: padding 0.3s ease;
@@ -506,6 +519,9 @@ ul.locations {
 }
 
 #side-nav-secondary {
+  .collapsible-header.active {
+    padding: 0 15px;
+  }
   &.secondary-open {
     ul {
       left: 50px;
@@ -518,7 +534,7 @@ ul.locations {
     left: -300px;
     .active {
       background-color: color("grey", "base");
-      padding: 16px;
+      padding-bottom: 16px;
     }
     h6.widget-heading {
       padding: 10px 7px;
@@ -837,7 +853,23 @@ footer.page-footer {
     font-size: 1.2em;
     padding-top: 10px;
   }
-
+  .card {
+    &:hover {
+      cursor: pointer;
+    }
+    .card-action {
+      text-transform: uppercase;
+    }
+    &.selected-theme {
+      width: calc(100% - 2px);
+      border: 3px solid;
+      border-color: color("dark-grey", "base");
+      .card-action {
+        background-color: color("dark-grey", "base");
+        color: color("shades", "white");
+      }
+    }
+  }
   .custom-colors {
     padding: 2em 0;
   }

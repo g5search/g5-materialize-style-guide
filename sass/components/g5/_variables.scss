@@ -67,11 +67,15 @@ $switch-radius: 4px !default;
 /* 11. Global
    ========================================================================== */
 
+$large-screen-up: 1201px !default;
 $very-large-screen: 1600px !default;
 $mega-large-screen: 1900px !default;
 
+$large-and-down: "only screen and (max-width : #{$large-screen-up})" !default;
 $mega-large-and-down: "only screen and (max-width : #{$mega-large-screen})" !default;
+$very-large-and-down: "only screen and (max-width : #{$very-large-screen})" !default;
 $very-large-and-up: "only screen and (min-width : #{$very-large-screen})" !default;
+$large-only: "only screen and (min-width : #{$large-screen-up}) and (max-width : #{$very-large-screen})" !default;
 
 /* 13. Navigation Bar
    ========================================================================== */

@@ -21,9 +21,9 @@
 
     &.active {
       color: color("dark-grey", "base");
-      border: 0 !important;
+      border-color: color("grey", "darken-1") !important;
       &:after {
-        background-color: transparent !important;
+        background-color: color("grey", "lighten-2");
       }
       i {
         -webkit-transform: rotate(180deg);

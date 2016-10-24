@@ -18,6 +18,9 @@ body > .ember-view {
 // need to account for G5 header
 body.ember-application {
   margin-top: 74px;
+  &.auth-disabled {
+    // margin-top: 0;
+  }
 }
 
 main {
@@ -237,7 +240,7 @@ main {
   }
   .modal-footer {
     background-color: color("dark-grey", "base");
-    padding: 4px 24px;
+    padding: 1px 24px;
     border-radius: 0 0 4px 4px;
     z-index: 1;
     border-top: none;
@@ -408,6 +411,53 @@ ul.locations {
         color: color("shades", "white");
       }
     }
+    .row {
+      .page-status-row {
+        height: 60px;
+        .page-status-element {
+          margin-left: -10px;
+          .switch {
+            padding-left: 5px;
+          }
+        }
+        .add-to-parent {
+          label {
+            display: none;
+          }
+          .input-field {
+            margin-top: 0.5rem;
+            margin-right: -20px;
+          }
+        }
+      }
+      .nav-include-row {
+        height: 60px;
+        .page-nav-element {
+          margin-left: -10px;
+          margin-top: -46px;
+          span.message {
+            // display: inline-block;
+            // max-width: 280px;
+            // font-style: italic;
+          }
+        }
+      }
+      .page-controls-row {
+        .col {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          &.control-footer {
+            text-align: right;
+            .cancel-button {
+              margin-right: -10px;
+            }
+          }
+          .delete-action {
+            margin-left: -10px;
+          }
+        }
+      }
+    }
   }
   li.disabled {
     background-color: color("grey", "lighten-3");
@@ -428,6 +478,7 @@ ul.locations {
   .secondary-content {
     float: right;
     margin-left: 5px;
+    cursor: pointer;
   }
   .controls {
     border-bottom: 1px solid;
@@ -438,6 +489,13 @@ ul.locations {
     .nav-pages-left {
       padding-top: 14px;
     }
+  }
+}
+.add-widget-action {
+  &.alt {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
   }
 }
 
@@ -467,6 +525,9 @@ ul.locations {
 // widget name editing - maybe too general
 .name .title:hover {
   cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .container-header {
@@ -590,20 +651,6 @@ ul.locations {
 // let's figure out how to cleanly align disparate elements
 .display-inline {
   display: inline;
-}
-
-.page-status-element {
-  .switch {
-    padding-left: 20px;
-  }
-}
-
-.page-nav-element {
-  span.message {
-    display: inline-block;
-    max-width: 280px;
-    font-style: italic;
-  }
 }
 
 .top-padding {
@@ -878,30 +925,6 @@ footer.page-footer {
 .city-state {
   float: left;
   width: 34%;
-}
-
-
-// explore if we can correctly use select with liquid fire
-.collection-item {
-  // border: 1px solid red !important;
-  // z-index: 1 !important;
-  // position: relative !important;
-  // overflow: visible !important;
-  .input-field.md-select {
-    // border: 1px solid green !important;
-    // position: relative !important;
-    // z-index: 9999999999999 !important;
-    .select-wrapper  {
-      // border: 1px solid orange !important;
-      // position: relative !important;
-      // z-index: 9999999999999 !important;
-      .dropdown-content {
-        // border: 3px solid blue !important;
-        // position: relative !important;
-        // z-index: 9999999999999 !important;
-      }
-    }
-  }
 }
 
 // kill box shadow for global components until I find the right way to handle

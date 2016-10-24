@@ -26,35 +26,16 @@
 
 [type="radio"] + label:before,
 [type="radio"] + label:after {
-   content: '';
-   display: inline-block;
-   margin: 0 4px -2px 0;
-   width: 16px;
-   height: 16px;
-   -moz-border-radius: 16px;
-   -webkit-border-radius: 16px;
-   border-radius: 16px;
-   background-color: white;
-   z-index: 0;
-   transition: .28s ease;
-
-
-
-  // content: '';
-  // position: absolute;
-  // left: 0;
-  // top: 0;
-  // margin: 4px;
-  // width: 16px;
-  // height: 16px;
-  // z-index: 0;
-  // transition: .28s ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  transition: .28s ease;
 }
-[type="radio"] + label:before {}
-[type="radio"] + label:after {
-  margin-left: -55px !important;
-}
-
 
 /* Unchecked styles */
 [type="radio"]:not(:checked) + label:before,
@@ -72,7 +53,6 @@
 }
 
 [type="radio"]:not(:checked) + label:after {
-  z-index: -1;
   transform: scale(0);
 }
 
@@ -90,16 +70,15 @@
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
   background-color: $radio-fill-color;
-  z-index: 0;
 }
 
 [type="radio"]:checked + label:after {
-  // transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 /* Radio With gap */
 [type="radio"].with-gap:checked + label:after {
-  // transform: scale(.5);
+  transform: scale(.5);
 }
 
 /* Focused styles */

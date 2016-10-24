@@ -532,7 +532,7 @@ ul.locations {
 .name .title:hover {
   cursor: pointer;
   &:hover {
-    text-decoration: underline;
+    font-weight: bold;
   }
 }
 

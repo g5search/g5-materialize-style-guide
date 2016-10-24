@@ -57,6 +57,10 @@ $collapsible-height: 3rem !default;
 /* 10. Forms
    ========================================================================== */
 
+ // Text Inputs + Textarea
+ $input-height: 2.5rem !default;
+ $input-margin: 4px 0 20px 0 !default;
+
 // Switches
 $switch-bg-color: $secondary-color !default;
 $switch-checked-lever-bg: $primary-color !default;
@@ -80,7 +84,7 @@ $large-only: "only screen and (min-width : #{$large-screen-up}) and (max-width :
 /* 13. Navigation Bar
    ========================================================================== */
 
-$navbar-height: 64px !default;
+$navbar-height: 66px !default;
 $navbar-font-size: 1.1rem !default;
 $navbar-font-color: color("dark-grey", "base") !default;
 

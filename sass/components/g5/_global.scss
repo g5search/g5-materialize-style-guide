@@ -27,6 +27,12 @@ main {
   flex: 1 0 auto;
 }
 
+.website {
+  header {
+    z-index: 99999;
+  }
+}
+
 #preview {
   display: none;
 }
@@ -928,7 +934,7 @@ footer.page-footer {
 }
 
 // kill box shadow for global components until I find the right way to handle
-.btn, .btn-large, .side-nav, .collection {
+.btn, .btn-large, .side-nav, .collection, nav {
     box-shadow: none !important;
 }
 .btn, .btn-large {
@@ -993,6 +999,12 @@ footer.page-footer {
       top: 50%;
       right: 20px;
       transform: translateY(-50%);
+      @media #{$very-large-and-down} {
+        .btn {
+          font-size: 80%;
+          i {display: none;}
+        }
+      }
     }
     .collapsible {
       border: 0;
@@ -1000,7 +1012,6 @@ footer.page-footer {
       margin: 0;
     }
     .collapsible-header {
-      border: 5px solid red;
       position: absolute;
       bottom: -5px;
       right: 25px;
@@ -1122,10 +1133,34 @@ footer.page-footer {
       padding: 0;
     }
   }
+
   .color-picker {
     padding-top: 20px !important;
+    .sp-replacer {
+      border: 0;
+      background: transparent;
+      .sp-preview {
+        width: 30px;
+        height: 30px;
+        border: 0;
+      }
+      .sp-dd {
+        display: none;
+      }
+    }
+    label {
+      padding-right: 20px;
+    }
+  }
+
+  .custom-fonts {
+    input[type=text] {
+      width: 95%;
+      margin-right: 7%;
+    }
   }
 }
+
 .locations-table.deleted {
   display:none;
 }
@@ -1157,4 +1192,9 @@ body.versions {
 
 body.website-page {
   overflow: hidden;
+}
+
+// temporary until g5 header styles can be addressed - very jacked.
+.g5-header {
+  display: none;
 }

@@ -6,7 +6,7 @@
 
 // G5 Color Pallete defined: https://app.frontify.com/d/atNclAeCVOGP/g5-style-guide#/basics/colors
 
-// For use on header, sidebar and footer elements. 
+// For use on header, sidebar and footer elements.
 
 $universal-blue: (
  "base":  #6dbde2
@@ -78,7 +78,7 @@ $dark-grey: (
 );
 
 $medium-grey: (
-  "base": #918f8f 
+  "base": #918f8f
 );
 
 $light-grey: (
@@ -441,7 +441,7 @@ $colors: (
       @return map-get($curr_color, $type);
     }
   }
-  @warn "Unknown `#{name}` in $colors.";
+  // @warn "Unknown `#{name}` in $colors.";
+  @warn "Unknown `#{$color} #{$type}` in $colors.";
   @return null;
 }
-

@@ -1109,8 +1109,6 @@ footer.page-footer {
       text-transform: uppercase;
     }
     &.selected-theme {
-      width: calc(100% - 2px);
-      border: 3px solid;
       border-color: color("dark-grey", "base");
       .card-action {
         background-color: color("dark-grey", "base");

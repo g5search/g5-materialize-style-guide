@@ -157,7 +157,7 @@ module.exports = function(grunt) {
           "js/date_picker/picker.js",
           "js/date_picker/picker.date.js",
           "js/character_counter.js",
-          "js/carousel.js",
+          "js/carousel.js"
         ],
         // the location of the resulting JS file
         dest: 'dist/js/materialize.js'

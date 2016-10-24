@@ -975,9 +975,11 @@ footer.page-footer {
     position: relative;
     width: 100%;
     .title {
-      float: left;
-      padding: 10px 0 0 40px;
+      position: absolute;
       width: 40%;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
       .corporate {
         font-weight: 600;
       }
@@ -998,6 +1000,7 @@ footer.page-footer {
       margin: 0;
     }
     .collapsible-header {
+      border: 5px solid red;
       position: absolute;
       bottom: -5px;
       right: 25px;
@@ -1055,7 +1058,7 @@ footer.page-footer {
     }
     li.active {
       .collapsible-header {
-        bottom: 4px;
+        bottom: 0;
       }
       .collapsible-body {
         display: block !important;
@@ -1130,4 +1133,28 @@ footer.page-footer {
 body.g5-user .locations-table.deleted {
   display:block;
   margin-top: 20px;
+}
+
+body.versions {
+  article {
+    ul {
+      position: relative;
+      li {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+          content: "\2022";
+          position: absolute;
+          top: -12px;
+          left: 15px;
+          color: black;
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+
+body.website-page {
+  overflow: hidden;
 }

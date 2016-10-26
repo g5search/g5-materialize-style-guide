@@ -1,31 +1,6 @@
 /* Switch
    ========================================================================== */
 
-// .switch label input[type=checkbox] {
-//
-//   &:checked + .lever {
-//
-//     &:after {
-//       left: 24px;
-//     }
-//   }
-// }
-//
-// .switch label {
-//   font-size: 1em;
-//   text-transform: uppercase;
-// }
-// .switch label .lever {
-//   width: 44px;
-//   margin: 0 5px;
-//
-//   &:after {
-//     border-radius: $switch-radius;
-//   }
-// }
-
-
-
 .switch label input[type=checkbox] {
 
   &:checked + .lever {

@@ -21,17 +21,17 @@
     float: left;
     font-size: 14px;
   }
-  &:after { 
-    content: "."; 
-    visibility: hidden; 
-    display: block; 
-    height: 0; 
+  &:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
     clear: both;
   }
 }
 
 
-// website status 
+// website status
 .status-live .chip {
   i {
     background-color: color("green", "base");
@@ -42,10 +42,10 @@
 }
 .status-pending .chip {
   i {
-    background-color: color("blue", "base");
+    background-color: color("universal-blue", "base");
   }
   span {
-    color: color("blue", "base");
+    color: color("universal-blue", "base");
   }
 }
 .status-no-deploy .chip {
@@ -72,4 +72,3 @@
     color: color("red", "darken-1");
   }
 }
-

@@ -58,3 +58,11 @@
     font-size: 1.2rem;
   }
 }
+
+.btn.edit-button.disabled,
+.btn.publish-button.disabled {
+  &:hover {
+    box-shadow: none !important;
+    transition: none !important;
+  }
+}

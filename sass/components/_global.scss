@@ -52,8 +52,15 @@ a {
 
 
 // classic clearfix
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
 .clearfix {
-  clear: both;
+  @extend %clearfix;
 }
 
 

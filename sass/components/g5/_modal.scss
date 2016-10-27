@@ -78,7 +78,7 @@
     margin-bottom: 1em;
   }
 
-  label {
+  .input-field label, .input-field.col label {
     position: relative;
     top: 0;
     font-size: 0.8rem;

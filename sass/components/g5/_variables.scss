@@ -84,7 +84,8 @@ $large-only: "only screen and (min-width : #{$large-screen-up}) and (max-width :
 /* 13. Navigation Bar
    ========================================================================== */
 
-$navbar-height: 66px !default;
+$navbar-height: 50px !default;
+$navbar-height-mobile: 50px !default;
 $navbar-font-size: 1.1rem !default;
 $navbar-font-color: color("dark-grey", "base") !default;
 

@@ -4,7 +4,9 @@
   width: 266px !important;
   margin-bottom: 100px;
 
-  a {
+  a,
+  li.website-services,
+  li.website-services a {
     display: block;
     width: 90%;
     margin: 10px 0 10px 5%;
@@ -29,6 +31,23 @@
     font-size: 1.1em !important;
     padding-right: 12px;
     color: color("grey", "lighten-1");
+  }
+
+  li.website-services {
+    margin: 10px 0 10px 2%;
+    i {
+      margin-right: 2rem;
+    }
+
+    .collapsible-body {
+      background-color: color("dark-grey", "lighten-1");
+      p {
+        padding: 0 !important;
+      }
+      a {
+        padding: 0 0 0 66px !important;
+      }
+    }
   }
 }
 

@@ -46,7 +46,7 @@
   }
 
   .form-field-row {
-    margin: 1em 0 0.5em 0;
+    margin: 0;
 
     .form-field:nth-child(even) {
       margin-left: 0;
@@ -71,11 +71,16 @@
   }
 
   input {
+    margin-top: 1px;
     background-color: color("shades", "white");
   }
 
   fieldset {
     margin-bottom: 1em;
+  }
+
+  .select-wrapper {
+    margin-top: -3px;
   }
 
   .input-field label, .input-field.col label {

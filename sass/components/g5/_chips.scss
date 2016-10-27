@@ -5,6 +5,12 @@
   background-color: transparent;
   text-align: center;
   width: 120px;
+  height: 36px;
+
+  img {
+    height: 36px;
+    width: 36px;
+  }
 
   i {
     width: 36px;
@@ -27,6 +33,10 @@
     display: block;
     height: 0;
     clear: both;
+  }
+
+  .close {
+    line-height: 36px;
   }
 }
 
@@ -70,5 +80,11 @@
   }
   span {
     color: color("red", "darken-1");
+  }
+}
+
+.chips {
+  .input {
+    height: 32px;
   }
 }

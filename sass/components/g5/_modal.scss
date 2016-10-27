@@ -46,7 +46,7 @@
   }
 
   .form-field-row {
-    margin: 2em 0;
+    margin: 1em 0 0.5em 0;
 
     .form-field:nth-child(even) {
       margin-left: 0;
@@ -74,18 +74,11 @@
     background-color: color("shades", "white");
   }
 
-  .form-field-row-css-custom {
-    margin-top: -10px !important;
-    label {
-      font-size: 1em;
-    }
-  }
-
   fieldset {
     margin-bottom: 1em;
   }
 
-  label {
+  .input-field label, .input-field.col label {
     position: relative;
     top: 0;
     font-size: 0.8rem;

@@ -1,60 +1,8 @@
 .side-nav {
-
   margin-top: 138px;  // 64px + G5 header 74px
   width: 266px !important;
   margin-bottom: 100px;
-
-  a,
-  li.website-services,
-  li.website-services a {
-    display: block;
-    width: 90%;
-    margin: 10px 0 10px 5%;
-    font-size: $sidenav-font-size;
-    color: $sidenav-font-color;
-    line-height: $sidenav-item-height;
-    height: $sidenav-item-height;
-    &.active {
-      background-color: color("blue", "base");
-      color: color("shades", "white");
-      i {
-        color: color("shades", "white") !important;
-      }
-    }
-  }
-  li.heading {
-    font-size: 1.5em;
-    color: color("grey", "lighten-1");
-    margin: 15px 25px;
-  }
-  li > a > i {
-    font-size: 1.1em !important;
-    padding-right: 12px;
-    color: color("grey", "lighten-1");
-  }
-
-  li.website-services {
-    margin: 10px 0 10px 2%;
-    i {
-      margin-right: 2rem;
-    }
-
-    .collapsible-body {
-      background-color: color("dark-grey", "lighten-1");
-      p {
-        padding: 0 !important;
-      }
-      a {
-        padding: 0 0 0 66px !important;
-      }
-    }
-  }
 }
-
-.side-nav-secondary.fixed {
-  left: 266px;
-}
-
 
 // Fixed sideNav DON'T hide on smaller
 @media #{$medium-and-down} {

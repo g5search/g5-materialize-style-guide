@@ -1,0 +1,8 @@
+
+[type="checkbox"]:checked {
+  + label:before {
+    top: 0;
+    width: 8px;
+    height: 16px;
+  }
+}

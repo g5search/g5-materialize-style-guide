@@ -1,9 +1,3 @@
-.side-nav {
-  margin-top: 138px;  // 64px + G5 header 74px
-  width: 266px !important;
-  margin-bottom: 100px;
-}
-
 // Fixed sideNav DON'T hide on smaller
 @media #{$medium-and-down} {
   .side-nav {

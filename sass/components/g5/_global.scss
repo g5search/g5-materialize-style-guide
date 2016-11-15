@@ -517,7 +517,7 @@ td, th{
       color: $collection-active-color;
 
       .secondary-content {
-        color: #fff;
+        color: color("shades", "white") !important;
       }
     }
   }
@@ -551,6 +551,9 @@ td, th{
 .secondary-content {
   float: right;
   color: $secondary-color;
+  &.btn {
+    color: color("shades", "white");
+  }
 }
 .collapsible .collection {
   margin: 0;

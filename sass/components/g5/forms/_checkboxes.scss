@@ -3,8 +3,6 @@
     top: 0;
     width: 8px;
     height: 16px;
-    // border-right: red !important;
-    // border-bottom: red !important;
   }
 }
 
@@ -21,5 +19,13 @@
       border-right-color: color("shades", "black");
       border-bottom-color: color("shades", "black");
     }
+  }
+}
+
+// Checkbox Styles
+[type="checkbox"] {
+  // Text Label Style
+  + label {
+    padding-left: 25px;
   }
 }

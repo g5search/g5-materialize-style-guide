@@ -8,14 +8,9 @@ header
     a.button-collapse.top-nav(href='#', data-activates='nav-mobile', class=(no_nav == false ? "full hide-on-large-only" : "" + "waves-effect waves-light circle hide-on-large-only"))
       i.material-icons menu
   ul#nav-mobile.side-nav.fixed
-    li(class="logo")
+    li(class="logo g5-m-logo")
       a#logo-container.brand-logo(href='/g5/')
         img(id='front-page-logo', class='logo-img', src='/images/g5-logo.png')
-    li(class="search")
-      div.search-wrapper.card
-        input(id="search")
-        i.material-icons search
-        div.search-results
     li.bold(class=(page == "About" ? "active" : ""))
       a.waves-effect.waves-teal(href='about.html') About
     li.bold(class=(page == "Getting Started" ? "active" : ""))

@@ -91,7 +91,7 @@
         } else {
           activates.css('white-space', 'nowrap');
         }
-
+        console.log('openeing dropdown')
         // Offscreen detection
         var windowHeight = window.innerHeight;
         var originHeight = origin.innerHeight();

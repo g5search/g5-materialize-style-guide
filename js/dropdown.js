@@ -125,6 +125,7 @@
         }
         // Vertical bottom offscreen detection
         if (offsetTop + activates.innerHeight() > windowHeight) {
+          console.log('off screen');
           // If going upwards still goes offscreen, just crop height of dropdown.
           if (offsetTop + originHeight - activates.innerHeight() < 0) {
             var adjustedHeight = windowHeight - offsetTop - verticalOffset;

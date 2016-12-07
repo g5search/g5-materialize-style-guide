@@ -1,5 +1,5 @@
 (function ($) {
-
+        console.log("if this doesn't work I'm going home");
   // Add posibility to scroll to selected option
   // usefull for select for example
   $.fn.scrollTo = function(elem) {
@@ -21,8 +21,8 @@
 
     // Open dropdown.
     if (options === "open") {
+      console.log('fing opening');
       this.each(function() {
-        console.log('fing opening');
         $(this).trigger('open');
       });
       return false;

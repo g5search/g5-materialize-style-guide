@@ -22,6 +22,7 @@
     // Open dropdown.
     if (options === "open") {
       this.each(function() {
+        console.log('fing opening');
         $(this).trigger('open');
       });
       return false;
@@ -91,7 +92,7 @@
         } else {
           activates.css('white-space', 'nowrap');
         }
-        console.log('openeing dropdown')
+        console.log('openeing dropdown');
         // Offscreen detection
         var windowHeight = window.innerHeight;
         var originHeight = origin.innerHeight();

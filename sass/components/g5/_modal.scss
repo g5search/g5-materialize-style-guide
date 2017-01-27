@@ -1,0 +1,92 @@
+.modal {
+
+
+  h1 {
+    font-size: 1.4em;
+    line-height: 1.4em;
+    margin: 2em, 0;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    width: calc(100% + 50px);
+    height: 50px;
+    line-height: 50px;
+    margin: -25px !important;
+    background-color: color("dark-grey", "base");
+    text-indent: 25px;
+  }
+
+  fieldset h4 {
+    margin: 0 !important;
+  }
+
+  .btn {
+    margin-right: 10px !important;
+  }
+
+  form {
+    margin-top: 35px;
+  }
+}
+
+.modal-content {
+  overflow-x: hidden;
+
+  .collection {
+    margin-top: 50px;
+  }
+
+  // deal with horizontal scrollbar on modal beneath tabs
+  .tabs {
+    overflow-x: hidden;
+  }
+
+  .form-field-row {
+    margin: 0;
+
+    .form-field:nth-child(even) {
+      margin-left: 0;
+    }
+  }
+
+  .row .col {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .btn {
+    margin-top: 1em;
+  }
+
+  .btn.save-btn {
+    display: none;
+  }
+
+  legend {
+    padding: 0 5px;
+  }
+
+  input {
+    margin-top: 1px;
+    background-color: color("shades", "white");
+  }
+
+  fieldset {
+    margin-bottom: 1em;
+  }
+
+  .select-wrapper {
+    margin-top: -3px;
+  }
+
+  .input-field label, .input-field.col label {
+    position: relative;
+    top: 0;
+    font-size: 0.8rem;
+    left: 0;
+  }
+}

@@ -1,0 +1,13 @@
+// Fixed Navbar - we don't want to fix nav
+.navbar-fixed {
+  z-index: 1;
+  nav {
+    position: relative;
+    background-color: color("grey", "lighten-1");
+  }
+
+  .version {
+    float: right;
+    padding-right: calc(100% - 94%);
+  }
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+// G5 styles
+
+// Mixins
+@import "components/g5/color";
+
+// Variables
+@import "components/g5/variables";
+@import "components/font-awesome-4.6.3/scss/font-awesome";
+
+// Materialize defaults - do not edit!
+
+// Mixins
+@import "components/mixins";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// components
+// @import "components/global";
+@import "components/icons-material-design";
+@import "components/grid";
+@import "components/navbar";
+@import "components/roboto";
+@import "components/typography";
+@import "components/cards";
+@import "components/toast";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/buttons";
+@import "components/dropdown";
+@import "components/waves";
+@import "components/modal";
+@import "components/collapsible";
+@import "components/chips";
+@import "components/materialbox";
+@import "components/forms/forms";
+@import "components/table_of_contents";
+@import "components/sideNav";
+@import "components/preloader";
+@import "components/slider";
+@import "components/carousel";
+@import "components/date_picker/default";
+@import "components/date_picker/default.date";
+@import "components/date_picker/default.time";
+
+// G5 styles
+
+// components
+@import "components/g5/global";
+@import "components/g5/grid";
+@import "components/g5/navbar";
+@import "components/g5/forms/forms";
+@import "components/g5/typography";
+@import "components/g5/cards";
+@import "components/g5/tabs";
+@import "components/g5/buttons";
+@import "components/g5/preloader";
+@import "components/g5/modal";
+@import "components/g5/collapsible";
+@import "components/g5/chips";
+@import "components/g5/sideNav";

@@ -1,0 +1,12 @@
+// Fixed sideNav DON'T hide on smaller
+@media #{$medium-and-down} {
+  .side-nav {
+    &.fixed {
+      transform: none;
+
+      &.right-aligned {
+        transform: none;
+      }
+    }
+  }
+}

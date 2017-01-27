@@ -1,0 +1,31 @@
+[type="checkbox"]:checked {
+  + label:before {
+    top: 0;
+    width: 8px;
+    height: 16px;
+  }
+}
+
+// Filled in Style
+[type="checkbox"].filled-in {
+  &:checked+label:after {
+    background-color: transparent;
+    border-color: color("grey", "lighten-1");
+  }
+  &:checked {
+    + label:before {
+      border-right: 2px solid;
+      border-bottom: 2px solid;
+      border-right-color: color("shades", "black");
+      border-bottom-color: color("shades", "black");
+    }
+  }
+}
+
+// Checkbox Styles
+[type="checkbox"] {
+  // Text Label Style
+  + label {
+    padding-left: 25px;
+  }
+}

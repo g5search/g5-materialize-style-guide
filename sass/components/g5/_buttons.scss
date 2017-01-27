@@ -1,0 +1,68 @@
+// shared styles
+
+.btn,
+.btn-flat {
+  margin-right: 5px;
+}
+
+// Shared icon styles
+.btn,
+.btn-floating,
+.btn-large,
+.btn-flat {
+  i {
+    font-size: 1rem;
+  }
+}
+
+// set position for buttons outside collections
+.anchor-actions {
+  width: 100%;
+  text-align: right;
+  padding: 0 0 10px 0;
+}
+
+// specific button styles
+
+.btn.confirm {
+  background-color: color("turquoise", "base") !important;
+}
+
+.btn.new-page,
+.btn.save-action {
+  // width: 100%;
+  // max-width: 180px;
+  // margin-left: calc(100% - 180px);
+  background-color: color("green", "base");
+  font-size: 1rem;
+  i {
+    font-size: 1rem;
+  }
+}
+
+.btn.upload-files {
+  background-color: color("green", "base");
+  font-size: 1rem;
+  i {
+    font-size: 1rem;
+  }
+}
+
+.btn-publish-all {
+  margin-right: 15px;
+}
+
+.btn.delete {
+  background-color: color("red", "base");
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.btn.edit-button.disabled,
+.btn.publish-button.disabled {
+  &:hover {
+    box-shadow: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,32 @@
+.tabs {
+  .tab {
+    &.themes-standard {}
+    &.themes-custom {}
+    &.themes-config {}
+  }
+}
+
+.tabs {
+  background-color: $tabs-bg-color;
+  margin-bottom: 20px;
+
+  .tab {
+    a {
+      background: linear-gradient(to top, color("grey", "darken-2") 0%,color("grey", "darken-2") 5px,#000000 5px,transparent 5px,transparent 100%);
+      color: $tabs-text-color;
+      i {
+        font-size: 1.2em;
+      }
+      &.active {
+        background: transparent;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .indicator {
+    height: 5px;
+    margin-left: -11px;
+    margin-right: -11px;
+  }
+}

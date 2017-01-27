@@ -1,0 +1,39 @@
+/* Switch
+   ========================================================================== */
+
+.switch label input[type=checkbox] {
+
+  &:checked + .lever {
+
+    &:after {
+      left: 34px;
+      content: "ON";
+    }
+  }
+}
+
+.switch label {
+  font-size: 1em;
+  text-transform: uppercase;
+  .onlabel,
+  .offlabel {
+    display: none;
+  }
+}
+.switch label .lever {
+  width: 88px;
+  height: 30px;
+
+  &:after {
+    content: "OFF";
+    color: color("shades", "white");
+    width: 54px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: $switch-radius;
+    box-shadow: none;
+    left: 0;
+    top: 0;
+    text-align: center;
+  }
+}

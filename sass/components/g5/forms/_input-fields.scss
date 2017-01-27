@@ -1,0 +1,121 @@
+// style input fields
+
+/* Text inputs */
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+  // General Styles
+  border-bottom: none;
+  border: 1px solid;
+  border-color: color("grey", "lighten-1");
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-indent: 6px;
+  background-color: color("grey", "lighten-5");
+
+  // Focused input style
+  &:focus:not([readonly]) {
+    border-bottom: 1px solid $input-focus-color;
+    box-shadow: 0 1px 0 0 $input-focus-color;
+  }
+
+  // Focused label style
+  &:focus:not([readonly])+label {
+    color: $input-focus-color;
+  }
+
+  // Valid Input Style
+  &.valid,
+  &:focus.valid {
+    border-bottom: 1px solid $input-success-color;
+    box-shadow: 0 1px 0 0 $input-success-color;
+  }
+
+  // Custom Success Message
+  &.valid + label:after,
+  &:focus.valid + label:after {
+    content: attr(data-success);
+    color: $input-success-color;
+    opacity: 1;
+  }
+
+  // Invalid Input Style
+  &.invalid,
+  &:focus.invalid {
+    border-bottom: $input-invalid-border;
+    box-shadow: 0 1px 0 0 $input-error-color;
+  }
+
+  // Custom Error message
+  &.invalid + label:after,
+  &:focus.invalid + label:after {
+    content: attr(data-error);
+    color: $input-error-color;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: 3;
+  }
+
+  // Full width label when using validate for error messages
+  &.validate + label {
+    width: 100%;
+    pointer-events: none;
+  }
+
+  // Form Message Shared Styles
+  & + label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 60px;
+    opacity: 0;
+    transition: .2s opacity ease-out, .2s color ease-out;
+  }
+}
+
+
+// Styling for input field wrapper
+.input-field {
+  label {
+    text-indent: 6px;
+    &.active {
+      font-size: 1em;
+      padding-bottom: 5px;
+      font-weight: 400;
+      .website-index & {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+// negate form style for asset path display
+input[type=text] {
+  background-color: color("shades", "white");
+  &.file-paths {
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.website-redirects {
+  textarea.materialize-textarea {
+    overflow-y: scroll;
+    padding-left: 20px;
+  }
+}

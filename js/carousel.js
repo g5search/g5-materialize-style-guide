@@ -4,18 +4,20 @@
 
     init : function(options) {
       var defaults = {
-        time_constant: 200, // ms
+        duration: 200, // ms
         dist: -100, // zoom scale TODO: make this more intuitive as an option
         shift: 0, // spacing for center image
         padding: 0, // Padding between non center items
-        full_width: false, // Change to full width styles
-        indicators: false // Toggle indicators
+        fullWidth: false, // Change to full width styles
+        indicators: false, // Toggle indicators
+        noWrap: false, // Don't wrap around and cycle through items.
+        onCycleTo: null // Callback for when a new slide is cycled to.
       };
       options = $.extend(defaults, options);
 
       return this.each(function() {
 
-        var images, offset, center, pressed, dim, count,
+        var images, item_width, item_height, offset, center, pressed, dim, count,
             reference, referenceY, amplitude, target, velocity,
             xform, frame, timestamp, ticker, dragged, vertical_dragged;
         var $indicators = $('<ul class="indicators"></ul>');
@@ -28,16 +30,17 @@
         // Don't double initialize.
         if (view.hasClass('initialized')) {
           // Redraw carousel.
-          $(this).trigger('carouselNext', [.000001]);
+          $(this).trigger('carouselNext', [0.000001]);
           return true;
         }
 
+
         // Options
-        if (options.full_width) {
+        if (options.fullWidth) {
           options.dist = 0;
           var firstImage = view.find('.carousel-item img').first();
           if (firstImage.length) {
-            imageHeight = firstImage.load(function(){
+            imageHeight = firstImage.on('load', function(){
               view.css('height', $(this).height());
             });
           } else {
@@ -57,6 +60,7 @@
         offset = target = 0;
         images = [];
         item_width = view.find('.carousel-item').first().innerWidth();
+        item_height = view.find('.carousel-item').first().innerHeight();
         dim = item_width * 2 + options.padding;
 
         view.find('.carousel-item').each(function (i) {
@@ -70,7 +74,9 @@
             }
 
             // Handle clicks on indicators.
-            $indicator.click(function () {
+            $indicator.click(function (e) {
+              e.stopPropagation();
+
               var index = $(this).index();
               cycleTo(index);
             });
@@ -123,16 +129,18 @@
 
         function scroll(x) {
           var i, half, delta, dir, tween, el, alignment, xTranslation;
+          var lastCenter = center;
 
           offset = (typeof x === 'number') ? x : offset;
           center = Math.floor((offset + dim / 2) / dim);
           delta = offset - center * dim;
           dir = (delta < 0) ? 1 : -1;
           tween = -dir * delta * 2 / dim;
+          half = count >> 1;
 
-          if (!options.full_width) {
+          if (!options.fullWidth) {
             alignment = 'translateX(' + (view[0].clientWidth - item_width) / 2 + 'px) ';
-            alignment += 'translateY(' + (view[0].clientHeight - item_width) / 2 + 'px)';
+            alignment += 'translateY(' + (view[0].clientHeight - item_height) / 2 + 'px)';
           } else {
             alignment = 'translateX(0)';
           }
@@ -148,60 +156,88 @@
           }
 
           // center
-          el = images[wrap(center)];
-          el.style[xform] = alignment +
-            ' translateX(' + (-delta / 2) + 'px)' +
-            ' translateX(' + (dir * options.shift * tween * i) + 'px)' +
-            ' translateZ(' + (options.dist * tween) + 'px)';
-          el.style.zIndex = 0;
-          if (options.full_width) { tweenedOpacity = 1; }
-          else { tweenedOpacity = 1 - 0.2 * tween; }
-          el.style.opacity = tweenedOpacity;
-          half = count >> 1;
+          // Don't show wrapped items.
+          if (!options.noWrap || (center >= 0 && center < count)) {
+            el = images[wrap(center)];
+
+            // Add active class to center item.
+            if (!$(el).hasClass('active')) {
+              view.find('.carousel-item').removeClass('active');
+              $(el).addClass('active');
+            }
+            el.style[xform] = alignment +
+              ' translateX(' + (-delta / 2) + 'px)' +
+              ' translateX(' + (dir * options.shift * tween * i) + 'px)' +
+              ' translateZ(' + (options.dist * tween) + 'px)';
+            el.style.zIndex = 0;
+            if (options.fullWidth) { tweenedOpacity = 1; }
+            else { tweenedOpacity = 1 - 0.2 * tween; }
+            el.style.opacity = tweenedOpacity;
+            el.style.display = 'block';
+          }
 
           for (i = 1; i <= half; ++i) {
             // right side
-            if (options.full_width) {
+            if (options.fullWidth) {
               zTranslation = options.dist;
               tweenedOpacity = (i === half && delta < 0) ? 1 - tween : 1;
             } else {
               zTranslation = options.dist * (i * 2 + tween * dir);
               tweenedOpacity = 1 - 0.2 * (i * 2 + tween * dir);
             }
-            el = images[wrap(center + i)];
-            el.style[xform] = alignment +
-              ' translateX(' + (options.shift + (dim * i - delta) / 2) + 'px)' +
-              ' translateZ(' + zTranslation + 'px)';
-            el.style.zIndex = -i;
-            el.style.opacity = tweenedOpacity;
+            // Don't show wrapped items.
+            if (!options.noWrap || center + i < count) {
+              el = images[wrap(center + i)];
+              el.style[xform] = alignment +
+                ' translateX(' + (options.shift + (dim * i - delta) / 2) + 'px)' +
+                ' translateZ(' + zTranslation + 'px)';
+              el.style.zIndex = -i;
+              el.style.opacity = tweenedOpacity;
+              el.style.display = 'block';
+            }
 
 
             // left side
-            if (options.full_width) {
+            if (options.fullWidth) {
               zTranslation = options.dist;
               tweenedOpacity = (i === half && delta > 0) ? 1 - tween : 1;
             } else {
               zTranslation = options.dist * (i * 2 - tween * dir);
               tweenedOpacity = 1 - 0.2 * (i * 2 - tween * dir);
             }
-            el = images[wrap(center - i)];
-            el.style[xform] = alignment +
-              ' translateX(' + (-options.shift + (-dim * i - delta) / 2) + 'px)' +
-              ' translateZ(' + zTranslation + 'px)';
-            el.style.zIndex = -i;
-            el.style.opacity = tweenedOpacity;
+            // Don't show wrapped items.
+            if (!options.noWrap || center - i >= 0) {
+              el = images[wrap(center - i)];
+              el.style[xform] = alignment +
+                ' translateX(' + (-options.shift + (-dim * i - delta) / 2) + 'px)' +
+                ' translateZ(' + zTranslation + 'px)';
+              el.style.zIndex = -i;
+              el.style.opacity = tweenedOpacity;
+              el.style.display = 'block';
+            }
           }
 
           // center
-          el = images[wrap(center)];
-          el.style[xform] = alignment +
-            ' translateX(' + (-delta / 2) + 'px)' +
-            ' translateX(' + (dir * options.shift * tween) + 'px)' +
-            ' translateZ(' + (options.dist * tween) + 'px)';
-          el.style.zIndex = 0;
-          if (options.full_width) { tweenedOpacity = 1; }
-          else { tweenedOpacity = 1 - 0.2 * tween; }
-          el.style.opacity = tweenedOpacity;
+          // Don't show wrapped items.
+          if (!options.noWrap || (center >= 0 && center < count)) {
+            el = images[wrap(center)];
+            el.style[xform] = alignment +
+              ' translateX(' + (-delta / 2) + 'px)' +
+              ' translateX(' + (dir * options.shift * tween) + 'px)' +
+              ' translateZ(' + (options.dist * tween) + 'px)';
+            el.style.zIndex = 0;
+            if (options.fullWidth) { tweenedOpacity = 1; }
+            else { tweenedOpacity = 1 - 0.2 * tween; }
+            el.style.opacity = tweenedOpacity;
+            el.style.display = 'block';
+          }
+
+          // onCycleTo callback
+          if (lastCenter !== center &&
+              typeof(options.onCycleTo) === "function") {
+            var $curr_item = view.find('.carousel-item').eq(wrap(center));
+            options.onCycleTo.call(this, $curr_item, dragged);
+          }
         }
 
         function track() {
@@ -222,7 +258,7 @@
 
           if (amplitude) {
             elapsed = Date.now() - timestamp;
-            delta = amplitude * Math.exp(-elapsed / options.time_constant);
+            delta = amplitude * Math.exp(-elapsed / options.duration);
             if (delta > 2 || delta < -2) {
                 scroll(target - delta);
                 requestAnimationFrame(autoScroll);
@@ -239,7 +275,7 @@
             e.stopPropagation();
             return false;
 
-          } else if (!options.full_width) {
+          } else if (!options.fullWidth) {
             var clickedIndex = $(e.target).closest('.carousel-item').index();
             var diff = (center % count) - clickedIndex;
 
@@ -248,7 +284,6 @@
               e.preventDefault();
               e.stopPropagation();
             }
-            console.log($(this));
             cycleTo(clickedIndex);
           }
         }
@@ -257,16 +292,17 @@
           var diff = (center % count) - n;
 
           // Account for wraparound.
-          if (diff < 0) {
-            if (Math.abs(diff + count) < Math.abs(diff)) { diff += count; }
+          if (!options.noWrap) {
+            if (diff < 0) {
+              if (Math.abs(diff + count) < Math.abs(diff)) { diff += count; }
 
-          } else if (diff > 0) {
-            if (Math.abs(diff - count) < diff) { diff -= count; }
+            } else if (diff > 0) {
+              if (Math.abs(diff - count) < diff) { diff -= count; }
+            }
           }
 
           // Call prev or next accordingly.
           if (diff < 0) {
-            console.log("TRIGGER", $(this));
             view.trigger('carouselNext', [Math.abs(diff)]);
 
           } else if (diff > 0) {
@@ -338,6 +374,15 @@
             target = offset + amplitude;
           }
           target = Math.round(target / dim) * dim;
+
+          // No wrap of items.
+          if (options.noWrap) {
+            if (target >= dim * (count - 1)) {
+              target = dim * (count - 1);
+            } else if (target < 0) {
+              target = 0;
+            }
+          }
           amplitude = target - offset;
           timestamp = Date.now();
           requestAnimationFrame(autoScroll);
@@ -360,18 +405,26 @@
         });
 
 
-
-        window.onresize = scroll;
+        $(window).on('resize.carousel', function() {
+          if (options.fullWidth) {
+            item_width = view.find('.carousel-item').first().innerWidth();
+            item_height = view.find('.carousel-item').first().innerHeight();
+            dim = item_width * 2 + options.padding;
+            offset = center * 2 * item_width;
+            target = offset;
+          } else {
+            scroll();
+          }
+        });
 
         setupEvents();
         scroll(offset);
 
         $(this).on('carouselNext', function(e, n) {
-          console.log("NEXT");
           if (n === undefined) {
             n = 1;
           }
-          target = offset + dim * n;
+          target = (dim * Math.round(offset / dim)) + (dim * n);
           if (offset !== target) {
             amplitude = target - offset;
             timestamp = Date.now();
@@ -383,7 +436,7 @@
           if (n === undefined) {
             n = 1;
           }
-          target = offset - dim * n;
+          target = (dim * Math.round(offset / dim)) - (dim * n);
           if (offset !== target) {
             amplitude = target - offset;
             timestamp = Date.now();

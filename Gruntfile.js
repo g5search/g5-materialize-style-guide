@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     //  Jasmine
     jasmine: {
       components: {
-	src: [
+        src: [
           'bin/materialize.js'
         ],
         options: {
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           sourcemap: false,
         },
         files: {
-          'dist/css/materialize.css': 'sass/g5-materialize.scss',
+          'dist/css/materialize.css': 'sass/materialize.scss',
         }
       },
 
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'dist/css/materialize.min.css': 'sass/g5-materialize.scss',
+          'dist/css/materialize.min.css': 'sass/materialize.scss',
         }
       },
 
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'css/ghpages-materialize.css': 'sass/g5-ghpages-materialize.scss',
+          'css/ghpages-materialize.css': 'sass/ghpages-materialize.scss',
         }
       },
 
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
           sourcemap: false
         },
         files: {
-          'bin/materialize.css': 'sass/g5-materialize.scss',
+          'bin/materialize.css': 'sass/materialize.scss',
         }
       }
     },
@@ -137,7 +137,7 @@ module.exports = function(grunt) {
           "js/global.js",
           "js/collapsible.js",
           "js/dropdown.js",
-          "js/leanModal.js",
+          "js/modal.js",
           "js/materialbox.js",
           "js/parallax.js",
           "js/tabs.js",
@@ -157,7 +157,7 @@ module.exports = function(grunt) {
           "js/date_picker/picker.js",
           "js/date_picker/picker.date.js",
           "js/character_counter.js",
-          "js/carousel.js"
+          "js/carousel.js",
         ],
         // the location of the resulting JS file
         dest: 'dist/js/materialize.js'
@@ -174,7 +174,7 @@ module.exports = function(grunt) {
           "js/global.js",
           "js/collapsible.js",
           "js/dropdown.js",
-          "js/leanModal.js",
+          "js/modal.js",
           "js/materialbox.js",
           "js/parallax.js",
           "js/tabs.js",
@@ -260,7 +260,7 @@ module.exports = function(grunt) {
             "global.js",
             "collapsible.js",
             "dropdown.js",
-            "leanModal.js",
+            "modal.js",
             "materialbox.js",
             "parallax.js",
             "tabs.js",
@@ -332,7 +332,7 @@ module.exports = function(grunt) {
         options: {
           pretty: true,
           data: {
-            debug: true
+            debug: false
           }
         },
         files: {
@@ -377,48 +377,9 @@ module.exports = function(grunt) {
           "pagination.html": "jade/pagination.jade",
           "breadcrumbs.html": "jade/breadcrumbs.jade",
           "carousel.html": "jade/carousel.jade",
-          "g5/index.html": "jade/g5/index.jade",
-          "g5/icons.html": "jade/g5/icons.jade",
-          "g5/about.html": "jade/g5/about.jade",
-          "g5/sass.html": "jade/g5/sass.jade",
-          "g5/getting-started.html": "jade/g5/getting-started.jade",
-          "g5/mobile.html": "jade/g5/mobile.jade",
-          "g5/showcase.html": "jade/g5/showcase.jade",
-          "g5/parallax.html": "jade/g5/parallax.jade",
-          "g5/parallax-demo.html": "jade/g5/parallax-demo.jade",
-          "g5/typography.html": "jade/g5/typography.jade",
-          "g5/color.html": "jade/g5/color.jade",
-          "g5/shadow.html": "jade/g5/shadow.jade",
-          "g5/grid.html": "jade/g5/grid.jade",
-          "g5/media-css.html": "jade/g5/media-css.jade",
-          "g5/table.html": "jade/g5/table.jade",
-          "g5/helpers.html": "jade/g5/helpers.jade",
-          "g5/forms.html": "jade/g5/forms.jade",
-          "g5/buttons.html": "jade/g5/buttons.jade",
-          "g5/navbar.html": "jade/g5/navbar.jade",
-          "g5/cards.html": "jade/g5/cards.jade",
-          "g5/preloader.html": "jade/g5/preloader.jade",
-          "g5/collections.html": "jade/g5/collections.jade",
-          "g5/badges.html": "jade/g5/badges.jade",
-          "g5/footer.html": "jade/g5/footer.jade",
-          "g5/dialogs.html": "jade/g5/dialogs.jade",
-          "g5/modals.html": "jade/g5/modals.jade",
-          "g5/dropdown.html": "jade/g5/dropdown.jade",
-          "g5/tabs.html": "jade/g5/tabs.jade",
-          "g5/side-nav.html": "jade/g5/sideNav.jade",
-          "g5/pushpin.html": "jade/g5/pushpin.jade",
-          "g5/waves.html": "jade/g5/waves.jade",
-          "g5/media.html": "jade/g5/media.jade",
-          "g5/collapsible.html": "jade/g5/collapsible.jade",
-          "g5/chips.html": "jade/g5/chips.jade",
-          "g5/scrollfire.html": "jade/g5/scrollFire.jade",
-          "g5/scrollspy.html": "jade/g5/scrollspy.jade",
-          "g5/transitions.html": "jade/g5/transitions.jade",
-          "g5/fullscreen-slider-demo.html": "jade/g5/fullscreen-slider-demo.jade",
-          "g5/pagination.html": "jade/g5/pagination.jade",
-          "g5/breadcrumbs.html": "jade/g5/breadcrumbs.jade",
-          "g5/carousel.html": "jade/g5/carousel.jade"
-
+          "pushpin-demo.html": "jade/pushpin-demo.jade",
+          "css-transitions.html": "jade/css-transitions.jade",
+          "404.html": "jade/404.jade",
 
         }
       }

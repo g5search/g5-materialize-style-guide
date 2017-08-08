@@ -407,6 +407,6 @@ $colors: (
     }
   }
   @warn "Unknown `#{name}` in $colors.";
-  // @warn "Unknown `#{$color} #{$type}` in $colors.";
   @return null;
 }
+
